@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand navbar-light bg-light navbar-rengi">
+	<div class="container">
+		<a class="navbar-brand navbar-logo-linki logo" href="index.html">lutfullaherkaya.com</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Ana Sayfa</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="xoxoyunu.html">XOX Oyunu</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+    let gezinmeCubuguLinkleri = document.getElementsByClassName("nav-link");
+    for (let i = 0; i < gezinmeCubuguLinkleri.length; ++i) {
+        if (gezinmeCubuguLinkleri[i].href.split("/").pop() == window.location.pathname.split("/").pop()) {
+            gezinmeCubuguLinkleri[i].className = "nav-link active";
+            break;
+        }
+    }
+</script>

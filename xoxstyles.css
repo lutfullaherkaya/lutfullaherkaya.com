@@ -1,0 +1,402 @@
+:root {
+  --xox-tablo-rengi: #ffffff;
+  --xox-tablo-kenar-rengi: rgb(0, 0, 0);
+  --slider-rengi: #3700ff;
+
+  --buton-rengi: #b13b3b;
+  --buton-koyu: #8c2e2e;
+
+  --navbar-rengi: #b13b3b;
+
+}
+.navbar-rengi {
+  background-color: var(--navbar-rengi) !important;
+}
+
+.btn-primary {
+  background-color: var(--buton-rengi);
+  border: 1px solid #653206;
+}
+
+.btn-primary:hover {
+  background-color: var(--buton-koyu);
+}
+
+
+.gizli {
+  display: none;
+}
+
+.hucre-animasyon {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.hucre.dolu {
+  cursor: not-allowed;
+}
+
+.hucre.inaktif {
+  opacity: 0.2;
+}
+
+.hucre {
+  max-width: min(100%, 256px);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.xox_table, .xox_table td, .xox_table th {
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: var(--xox-tablo-rengi);
+}
+
+.xox_table table {
+  border-collapse: collapse;
+}
+
+.xox_table td, .xox_table tr, .xox_table th {
+  border-color: var(--xox-tablo-kenar-rengi);
+}
+
+.xox-padding-silme {
+  padding-right: 0;
+}
+
+.xox_table {
+  width: 100%;
+}
+
+.xox-table-td {
+  width: 33.333%;
+  position: relative;
+}
+
+.xox-table-td:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+.hucre {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+
+
+.solpadding08rem {
+  padding-left: 0.8rem;
+}
+
+.y-basla-yazi-divde-dikortala {
+  line-height: 50px;
+}
+
+.btn-img-table {
+  width: 50px;
+}
+
+.btn-img-table-td {
+  width: 33.333%;
+  position: relative;
+}
+
+.btn-img-table-td:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+.btn-img-hucre {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.winning-message {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .9);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+/*
+.winning-message button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}*/
+
+.winning-message.show {
+  display: flex;
+}
+
+.slidecontainer {
+  width: 100%;
+  /* Width of the outside container */
+}
+
+/* The slider itself */
+
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: var(--slider-rengi);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: var(--slider-rengi);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.zorluk {
+  font-size: 200%;
+}
+
+.y-basla-btn {
+  width: 100%;
+  white-space: normal;
+}
+
+.wrapper {
+  padding-top: 1rem;
+}
+
+.outer {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.itemwrapper, .itemwrappergrafiksag, .itemwrappergrafiksol {
+  display: table-cell;
+  vertical-align: top;
+  width: 100%;
+}
+
+.leftpad {
+  padding-left: 0.5rem;
+}
+
+.rightpad {
+  padding-right: 0.5rem;
+}
+
+.y-basla-img {
+  max-width: 20%;
+  height: auto;
+}
+
+.delete-left-pad {
+  padding-left: 0;
+}
+
+.uppad {
+  padding-top: 2rem;
+}
+
+.skor-yazi, .skor-sayi {
+  font-size: 120%;
+}
+
+.oyunbitmeekranibutonlar {
+  width: 70%;
+}
+
+.skor-tablosu {
+  background-color: var(--buton-rengi);  
+}
+
+.top-margin {
+  margin-top: 1rem;
+}
+
+.winning-message {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.oldun {
+  color: #ff0000;
+  font-weight: 400;
+  font-size: 5rem;
+  animation: fade-in 10s linear, text-zoom 5s linear;
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes text-zoom {
+  0% { font-size: 3rem; }
+  25% { font-size: 3.6rem; }
+  50% { font-size: 4.2rem; }
+  75% { font-size: 4.6rem; }
+  100% { font-size: 5rem; }
+}
+.padding-top-sifir {
+  padding-top: 0;
+}
+/* farkli cihaz boylarinda farkli boyutta divler elde etmek icin*/
+
+/*---Media Queries --*/
+
+@media (max-width: 1200px) {
+  .zorluk {
+    font-size: 180%;
+  }
+}
+
+@media (max-width: 992px) {
+  .xox-display-4 {
+    font-size: 250%;
+  }
+  .zorluk {
+    font-size: 150%;
+  }
+  .skor-yazi {
+    font-size: 78%;
+  }
+  .skor-sayi {
+    font-size: 95%;
+  }
+  .solpadding08rem {
+    padding-left: 0;
+  }
+  .oyunbitmeekranibutonlar {
+    width: 80%;
+  }
+  .itemwrappergrafiksol {
+    display: block;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+  .itemwrappergrafiksag {
+    display: block;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .xox-padding-silme {
+    padding-right: 1rem;
+  }
+  .skor-yazi {
+    font-size: 100%;
+  }
+  .solpadding08rem {
+    padding-left: 0.8rem;
+  }
+  .oyunbitmeekranibutonlar {
+    width: 100%;
+  }
+  .itemwrappergrafiksol {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    padding-right: 0.5rem;
+  }
+  .itemwrappergrafiksag {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .zorluk {
+    font-size: 120%;
+  }
+  .winning-message {
+    font-size: 3rem;
+  }
+  /*
+    .winning-message button {
+        font-size: 2rem;
+    }*/
+  .skor-yazi {
+    font-size: 85%;
+  }
+}
