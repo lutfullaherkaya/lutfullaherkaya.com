@@ -3,6 +3,11 @@ var sozluk = {
         'tr': 'Ana Sayfa',
         'en': 'Home',
     },
+    'anasayfatitle': {
+        'tr': 'Lütfullah Erkaya | Resmi Site',
+        'en': 'Lütfullah Erkaya | Official Website',
+    },
+
     "xox_oyunu": {
         'tr': 'XOX Oyunu',
         'en': 'Tic-Tac-Toe',
