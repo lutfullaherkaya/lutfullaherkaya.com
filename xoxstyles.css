@@ -1,0 +1,642 @@
+:root {
+    --xox-tablo-rengi: rgba(0, 0, 0, 0.1);
+    --xox-tablo-kenar-rengi: #EDFFEC;
+    --slider-rengi: #ff312e;
+    --slider-ve-form-arkaplan: #ececec;
+
+    --buton-rengi: #e93532a6;
+    --tablo-rengi: #ff312e91;
+    --buton-koyu:  #ca2320c7;
+    --link-rengi: rgb(122, 148, 215);
+    --yazi-renk: #EDFFEC;
+    --buton-yazi-renk: #EDFFEC;
+
+    --footer-arkaplan-renk: rgba(31, 31, 29, 0.49);
+    --footer-yazi-renk: #c3ccc2;
+
+    /*--navbar-rengi: #b13b3b;*/
+
+
+}
+
+
+
+
+
+body {
+    background-color: rgb(27, 29, 35);
+    background-image: url("wallhaven-4gw97n.jpg");
+
+}
+
+footer {
+    background-color: var(--footer-arkaplan-renk);
+    color: var(--footer-yazi-renk);
+    padding-top: 2rem;
+}
+
+.xox-yazi {
+    color: var(--yazi-renk);
+}
+
+.xox-linkler, .xox-linkler:hover, .xox-linkler:focus, .xox-linkler:active {
+    color: var(--link-rengi);
+}
+
+.xox-buton-yazi {
+    color: var(--buton-yazi-renk);
+    font-size: 1.3rem;
+}
+
+
+
+.btn-primary {
+    background-color: var(--buton-rengi);
+    border: 1px solid #653206;
+}
+
+.btn-primary:hover {
+    background-color: var(--buton-koyu);
+    border: 1px solid #653206;
+}
+.btn-primary:active {
+    background-color: var(--buton-koyu) !important;
+    border: 1px solid #653206 !important;
+}
+
+.btn-primary:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
+
+.hucre-animasyon {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.hucre.dolu {
+    cursor: not-allowed;
+}
+
+.hucre.bos {
+    opacity: 0.4;
+    filter: blur(4px);
+}
+
+
+.hucre {
+    max-width: min(100%, 256px);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.xox_table, .xox_table td, .xox_table th {
+    border: 2px solid #ddd;
+    text-align: left;
+    background-color: var(--xox-tablo-rengi);
+}
+
+.xox_table table {
+    border-collapse: collapse;
+}
+
+.xox_table td, .xox_table tr, .xox_table th {
+    border-color: var(--xox-tablo-kenar-rengi);
+}
+
+
+
+
+.xox_table {
+    width: 100%;
+
+}
+
+.xox-table-td {
+    width: 33.3333%;
+    position: relative;
+}
+
+
+.xox-table-td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+.hucre {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+
+
+
+.solpadding08rem {
+    padding-left: 0.8rem;
+}
+
+.y-basla-yazi-divde-dikortala {
+    line-height: 50px;
+}
+
+.btn-img-table {
+    width: 50px;
+}
+
+.btn-img-table-td {
+    width: 33.333%;
+    position: relative;
+}
+
+.btn-img-table-td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+.btn-img-hucre {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+
+}
+
+#skor-kucuk {
+    display: none;
+}
+
+.winning-message {
+    display: none;
+
+    width:      100%;
+    height:     100%; 
+    z-index:    9999;
+    top:        0; 
+    left:       0; 
+    position:   fixed;
+
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+
+
+}
+
+/*
+.winning-message button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}*/
+
+.winning-message.show {
+    display: flex;
+}
+
+.slidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+.form-control {
+    background-color: var(--slider-ve-form-arkaplan);
+}
+
+/* The slider itself */
+
+.slider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    /* Full-width */
+    height: 20px;
+    /* Specified height */
+    background: var(--slider-ve-form-arkaplan);
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: .15rem;
+}
+
+/* Mouse-over effects */
+
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: var(--slider-rengi);
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+    border-radius: .15rem;
+
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: var(--slider-rengi);
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+    border-radius: .15rem;
+
+}
+.ses-slider {
+    height: 10px;
+}
+.ses-slider::-webkit-slider-thumb {
+    width: 15px;
+    /* Set a specific slider handle width */
+    height: 15px;
+    /* Slider handle height */
+    background: var(--slider-rengi);
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.ses-slider::-moz-range-thumb {
+    width: 15px;
+    /* Set a specific slider handle width */
+    height: 15px;
+    /* Slider handle height */
+    background: var(--slider-rengi);
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.flash{
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 9;
+    background-color:#fff;
+}
+
+
+.zorluk {
+    font-size: 200%;
+}
+
+.y-basla-btn {
+    width: 100%;
+    white-space: normal;
+}
+
+.wrapper {
+    padding-top: 1rem;
+}
+
+.outer {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.itemwrapper, .itemwrappergrafiksag, .itemwrappergrafiksol {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+}
+
+.leftpad {
+    padding-left: 7.5px;
+}
+
+.rightpad {
+    padding-right: 7.5px;
+}
+
+.y-basla-img {
+    max-width: 20%;
+    height: auto;
+}
+
+.delete-left-pad {
+    padding-left: 0;
+}
+
+.uppad {
+    padding-top: 2rem;
+}
+
+.skor-yazi, .skor-sayi {
+    font-size: 120%;
+}
+
+.oyunbitmeekranibutonlar {
+    width: 32rem;
+}
+
+.skor-tablosu {
+    background-color: var(--tablo-rengi);
+}
+
+.top-margin {
+    margin-top: 1rem;
+}
+
+.winning-message {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+.salla {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.4s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.oldun {
+    color: #ff0000;
+    font-weight: 400;
+    font-size: 5rem;
+    animation: fade-in 10s linear, text-zoom 5s linear;
+}
+@keyframes fade-in {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes text-zoom {
+    0% { font-size: 3rem; }
+    25% { font-size: 3.6rem; }
+    50% { font-size: 4.2rem; }
+    75% { font-size: 4.6rem; }
+    100% { font-size: 5rem; }
+}
+.padding-top-sifir {
+    padding-top: 0;
+}
+
+.grafikle-sesayari {
+    display: flex;
+    justify-content: space-between;
+}
+.ses-ayari {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    align-self: center;
+
+}
+
+.fa-volume-down, .fa-volume-up {
+    font-size: 1.2rem;
+    align-self: center;
+}
+.slidecontainer {
+    align-self: center;
+}
+
+
+
+
+/* farkli cihaz boylarinda farkli boyutta divler elde etmek icin*/
+
+/*---Media Queries --*/
+@media (min-width: 1200px) {
+    #xox-baslik {
+        font-size: 2.4rem;
+    }
+    #xox-dashboard h4 {
+        font-size: 1.7rem;
+    }
+    #xox-dashboard p {
+        font-size: 1.25rem;
+    }
+    .ses-slider {
+        width: 140px;
+    }
+    .fa-volume-down, .fa-volume-up {
+        font-size: 20px;
+    }
+    .xox-buton-yazi {
+        font-size: 1.25rem;
+    }
+    .skor-yazi {
+        font-size: 1.25rem;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    .zorluk {
+        font-size: 180%;
+    }
+}
+
+@media (max-width: 992px) {
+    .xox-display-4 {
+        font-size: 250%;
+    }
+    .zorluk {
+        font-size: 150%;
+    }
+    .skor-yazi {
+        font-size: 78%;
+    }
+    .skor-sayi {
+        font-size: 95%;
+    }
+    .solpadding08rem {
+        padding-left: 0;
+    }
+    .xox-buton-yazi {
+        font-size: 1rem;
+    }
+
+    .y-basla-yazi-divde-dikortala {
+        line-height: 35px;
+    }
+    .btn-img-table {
+        width: 35px;
+    }
+
+    .itemwrappergrafiksol {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
+    .itemwrappergrafiksag {
+        display: block;
+        padding-left: 0;
+    }
+    .form-control-lg {
+        font-size: 1rem !important;
+    }
+    .ses-slider {
+        width: 108px;
+    }
+}
+
+@media (max-width: 768px) {
+    .xox-padding-silme {
+        padding-right: 1rem;
+    }
+    .skor-yazi {
+        font-size: 100%;
+    }
+    .solpadding08rem {
+        padding-left: 0.8rem;
+    }
+    .oyunbitmeekranibutonlar {
+        width: 100%;
+    }
+    .itemwrappergrafiksol {
+        display: table-cell;
+        vertical-align: top;
+        width: 100%;
+        padding-right: 0.5rem;
+    }
+    .itemwrappergrafiksag {
+        display: table-cell;
+        vertical-align: top;
+        width: 100%;
+        padding-left: 0.5rem;
+    }
+    .form-control-lg {
+        font-size: 1.25rem !important;
+    }
+
+}
+
+@media (max-width: 576px) {
+    #xox-baslik {
+        font-size: 8vw;
+    }
+    #xox-dashboard h4 {
+        font-size: 6vw;
+    }
+    #xox-dashboard p {
+        font-size: 5vw;
+    }
+    .ses-slider {
+        width: 23vw;
+    }
+    .fa-volume-down, .fa-volume-up {
+        font-size: 3.8vw;
+    }
+    .xox-buton-yazi {
+        font-size: 3.4vw;
+    }
+
+    .y-basla-yazi-divde-dikortala {
+        line-height: 7vw;
+    }
+    .btn-img-table {
+        width: 7vw;
+    }
+
+    .zorluk {
+        font-size: 120%;
+    }
+
+    .winning-message {
+        font-size: 3rem;
+    }
+    /*
+      .winning-message button {
+          font-size: 2rem;
+      }*/
+    .skor-yazi {
+        font-size: 85%;
+    }
+    
+
+}
+
+@media (max-width: 390px) {
+    .xox-buton-yazi {
+        font-size: 3.2vw;
+    }
+    #skor-kucuk {
+        display: table;
+    }
+    #skor-buyuk {
+        display: none;
+    }
+
+    
+
+}

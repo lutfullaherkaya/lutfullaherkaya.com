@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+:root {
+  --kenar-rengi: #fff9ef;
+
+  --arkaplan-rengi: #4e4b4b;
+  --konteynir-rengi: #252524ea;
+
+  --giris-yazi-rengi: #EDFFEC;
+
+  --yazi-rengi: #EDFFEC;
+  --logo-ve-navbar-yazi-rengi: #fcffd7;
+  
+  --inen-navbar-rengi: #7f2928fb;
+
+  --navbar-active-rengi: #edffecb7;
+
+  --sosyal-ikon-rengi: #b8ec7d;
+
+  --footer-arkaplan:#1f1f1dea;
+  --footer-yazi-rengi: #c3ccc2;
+
+  --saril-buton-rengi: #7f2928;
+  --saril-buton-koyu: #5c1d1c;
+  /*
+  --kenar-rengi: #fff9ef;
+  --arkaplan-rengi: #4e4b4b;
+  --konteynir-rengi: #fff9ef;
+  --yazi-rengi: #653206;
+
+  --giris-plan:  #FFEFAE;
+  --gezinme-cubugu-rengi: #FFEFAE;
+
+  --footer-arkaplan: rgb(65, 32, 6);
+  */
+}
+.gizli {
+  display: none;
+}
+
+.pad-60px-top {
+  padding-top: 60px !important;
+}
+.pad-60px-bottom {
+  padding-bottom: 60px !important;
+}
+.pad-60px-left {
+  padding-left: 60px !important;
+}
+.pad-60px-right {
+  padding-right: 60px !important;
+}
+.pad-30px-top {
+  padding-top: 30px !important;
+}
+.pad-30px-bottom {
+  padding-bottom: 30px !important;
+}
+.pad-30px-left {
+  padding-left: 30px !important;
+}
+.pad-30px-right {
+  padding-right: 30px !important;
+}
+.pad-15px-top {
+  padding-top: 15px !important;
+}
+.pad-15px-bottom {
+  padding-bottom: 15px !important;
+}
+.pad-15px-left {
+  padding-left: 15px !important;
+}
+.pad-15px-right {
+  padding-right: 15px !important;
+}
+.pad-0-top {
+  padding-top: 0 !important;
+}
+.pad-0-bottom {
+  padding-bottom: 0 !important;
+}
+.pad-0-left {
+  padding-left: 0 !important;
+}
+.pad-0-right {
+  padding-right: 0 !important;
+}
+.pad-0-imp {
+  padding: 0 !important;
+}
+.mar-0-imp {
+  margin: 0 !important;
+}
+
+.dil-indiricisi {
+  color: var(--logo-ve-navbar-yazi-rengi);
+}
+
+
+
+.nav-link, .logo {
+  color: var(--logo-ve-navbar-yazi-rengi) !important;
+}
+
+.active {
+  color: var(--navbar-active-rengi) !important;
+}
+
+.gizli {
+  display: none;
+}
+
+.link-rengi-normallestir, .link-rengi-normallestir:hover, .link-rengi-normallestir:focus, .link-rengi-normallestir:active {
+  color: var(--sosyal-ikon-rengi);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: var(--yazi-rengi);
+
+}
+body {
+  background-color: #5c1d1c;
+  background-image: url("wallhaven-4ylxyg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.girisss {
+  height: calc(100vh - 80px);
+
+}
+.saril-resimler {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.sarilma-oncesi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+.sarilirkene {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.saril {
+  border-radius: 0;
+  background-color: var(--saril-buton-rengi);
+  color: #FDFDFD;
+  width: 7rem;
+}
+.saril:hover {
+  background-color: var(--saril-buton-koyu);
+}
+
+.saril:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.saril-sayisi {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 10px;
+}
+
+
+
+.transparan-siyah-arka {
+  background-color: rgba(39, 133, 63, 0.5);
+}
+
+.parallax {
+  /* The image used */
+  /* Set a specific height */
+  background-image: url("wallhaven-4gw97n.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.giris-baslik-yazilar {
+  color: var(--giris-yazi-rengi);
+}
+
+.giris-baslik-yazilar p {
+  -webkit-text-stroke-width: 1.4px;
+  -webkit-text-stroke-color: black;
+}
+
+.giris-baslik-yazilar h1 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.index-container, .yazilar-container {
+  background-color: var(--konteynir-rengi);
+  /*outline: 1px solid var(--kenar-rengi);*/
+}
+
+.asagi-padding-5-2 {
+  padding-bottom: 5rem;
+}
+
+.yukari-padding-5-2, .yukari-padding-5 {
+  padding-top: 5rem;
+}
+
+.yukari-padding-4 {
+  padding-top: 4rem;
+}
+.asagi-padding-18 {
+  padding-bottom: 1.8rem;
+}
+
+
+.navbar {
+  height: 80px;
+  /*outline: 1px solid var(--kenar-rengi);*/
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding-right: 0 !important;
+  padding-left: 1rem;
+}
+
+
+.logo {
+  font-size: 1.3rem;
+  padding-left: 1rem;
+}
+
+
+.navbar-rengi {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+#komik-video-butonu, #rastgele-video {
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+
+.iletisim-linki {
+  font-size: 4.5em;
+  padding: 3rem;
+
+}
+
+.socialresim-div {
+  display: inline-block;
+}
+
+.fa-medium-m {
+  color: var(--sosyal-ikon-rengi);
+}
+
+.fa-linkedin {
+  color: var(--sosyal-ikon-rengi);
+}
+
+.fa-github {
+  color: var(--sosyal-ikon-rengi);
+}
+
+.fa-linkedin:hover, .fa-github:hover, .fa-medium-m:hover {
+  color: #d5d5d5;
+}
+
+.iletisim-linki:hover {
+  color: #d5d5d5;
+}
+
+footer {
+  background-color: var(--footer-arkaplan);
+  color: var(--footer-yazi-rengi);
+  padding-top: 2rem;
+}
+
+hr {
+  border-top: 1px solid #d5d5d5;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 50%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #d5d5d5;
+}
+
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+.telif {
+  font-size: 1.2em;
+}
+
+
+
+.giris-baslik-yazilar p, .giris-baslik-yazilar h1 {
+  text-align: right;
+  font-weight: 450;
+
+}
+.giris-baslik-yazilar h1 {
+  font-size: 6vw;
+}
+.giris-baslik-yazilar p {
+  font-size: 3vw;
+}
+
+.giris-baslik-yazilar {
+  position: absolute;
+  top: 35%;
+}
+
+.inlayn {
+  display: inline-block;
+}
+
+.hos-gelme-yeni {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hos-gelme-yeni h2 {
+  font-weight:normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.hos-gelme-yeni p, #lutfullah-erkaya-konumu-sag, #lutfullah-erkaya-konumu-asagi, #le-konum-paragraf {
+  font-size: 1.36rem;
+}
+
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('wallhaven-4ylxyg.jpg');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+
+#inen-navbar {
+  background-color: var(--inen-navbar-rengi) !important; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -100px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#inen-navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+
+/* farkli cihaz boylarinda farkli boyutta divler elde etmek icin*/
+
+/*---Media Queries --*/
+@media (max-width: 1200px) {
+  .hos-gelme-yeni h2 {
+    font-size: 2.3rem;
+  }
+  .hos-gelme-yeni p, #lutfullah-erkaya-konumu-sag, #lutfullah-erkaya-konumu-asagi, #le-konum-paragraf {
+    font-size: 1.13rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hos-gelme-yeni {
+    text-align: center;
+  }
+
+  .hos-gelme-yeni p, #lutfullah-erkaya-konumu-sag, #lutfullah-erkaya-konumu-asagi, #le-konum-paragraf {
+    font-size: 1.5rem;
+  }
+  .giris-isim h1 {
+    font-size: 8vw ;
+  }
+  .giris-isim p {
+    font-size: 4vw;
+  }
+  .giris-baslik-yazilar h1 {
+    font-size: 9vw;
+  }
+  .giris-baslik-yazilar p {
+    font-size: 4.5vw;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .display-4 {
+    font-size: 200%;
+  }
+  .girisss {
+    height: 50vh;
+  
+  }
+  .giris-isim {
+    height:12vh;
+  }
+  .giris-arkaplan {
+    height:12vh;
+  }
+  .giris-baslik-yazilar {
+    position: absolute;
+    top: 25%;
+  }
+  .giris-baslik-yazilar h1 {
+    font-size: 10vw;
+    
+  }
+  .giris-baslik-yazilar p {
+    font-size: 6vw;
+    
+  }
+
+  .hos-gelme-yeni {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .hos-gelme-yeni p, #lutfullah-erkaya-konumu-sag, #lutfullah-erkaya-konumu-asagi, #le-konum-paragraf {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  footer h4 {
+    font-size: 25px !important;
+  }
+  footer p {
+    font-size: 16px !important;
+  }
+
+
+  #saril-sayisi {
+    font-size: 15px;
+  }
+
+  .display-4 {
+    font-size: 160%;
+  }
+  .logo, .nav-link {
+    font-size: 3.6vw;
+  }
+  .asagi-padding-5-2 {
+    padding-bottom: 1.3rem;
+  }
+  .yukari-padding-5-2 {
+    padding-top: 1.3rem;
+  }
+  .navbar {
+    height: 65px;
+  }
+  .giris-baslik-yazilar p {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .giris-baslik-yazilar h1 {
+    -webkit-text-stroke-width: 1.4px;
+    -webkit-text-stroke-color: black;
+  }
+
+}
+@media (max-width: 400px) {
+  .social p {
+    font-size: 16px;
+  }
+  #bulbeni {
+    font-size: 25px;
+  }
+  .iletisim-linki {
+    font-size: 22vw;
+  }
+  .hos-gelme-yeni h2 {
+    font-size: 25px;
+  }
+  .hos-gelme-yeni p, #lutfullah-erkaya-konumu-sag, #lutfullah-erkaya-konumu-asagi, #le-konum-paragraf {
+    font-size: 16px;
+  }
+  .nav-link {
+    white-space: normal ;
+  }
+  .giris-baslik-yazilar p {
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .giris-baslik-yazilar h1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  .navbar {
+    height: 53px;
+  }
+}
+
+@media (max-width: 280px) {
+  .nav-link {
+    white-space: normal ;
+  }
+  
+}
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
