@@ -35,6 +35,18 @@ footer {
     padding-top: 2rem;
 }
 
+@font-face {
+    font-family: 'OptimusPrincepsSemiBold';
+    src: url('darksoulsfontu/optimusprincepssemibold.eot');
+    src: url('darksoulsfontu/optimusprincepssemibold.eot?#iefix') format('embedded-opentype'),
+    url('darksoulsfontu/optimusprincepssemibold.ttf') format('truetype'),
+    url('darksoulsfontu/optimusprincepssemibold.svg#OptimusPrincepsSemiBold') format('svg');
+}
+#oyun-bitme-mesaji {
+    font-family: 'OptimusPrincepsSemiBold',sans-serif;
+}
+
+
 .xox-yazi {
     color: var(--yazi-renk);
 }
@@ -427,7 +439,7 @@ footer {
 .oldun {
     color: #ff0000;
     font-weight: 400;
-    font-size: 5rem;
+    font-size: min(15vw, 7rem);
     animation: fade-in 10s linear, text-zoom 5s linear;
 }
 @keyframes fade-in {
@@ -437,11 +449,8 @@ footer {
 }
 
 @keyframes text-zoom {
-    0% { font-size: 3rem; }
-    25% { font-size: 3.6rem; }
-    50% { font-size: 4.2rem; }
-    75% { font-size: 4.6rem; }
-    100% { font-size: 5rem; }
+    0% { font-size: min(7.5vw, 3.5rem); }
+    100% { font-size: min(15vw, 7rem); }
 }
 .padding-top-sifir {
     padding-top: 0;

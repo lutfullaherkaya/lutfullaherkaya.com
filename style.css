@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;600;700;800;900&display=swap');
 
 :root {
   --kenar-rengi: #fff9ef;
@@ -34,6 +35,8 @@
   --footer-arkaplan: rgb(65, 32, 6);
   */
 }
+
+
 .gizli {
   display: none;
 }
@@ -118,7 +121,9 @@
 html, body {
   height: 100%;
   width: 100%;
+
   font-family: "Poppins", sans-serif;
+
   color: var(--yazi-rengi);
 
 }
@@ -135,6 +140,14 @@ body {
   height: calc(100vh - 80px);
 
 }
+
+
+.stroke-yok {
+  -webkit-text-stroke-width: 0 !important;
+}
+
+
+
 .saril-resimler {
   position: relative;
   top: 0;
@@ -252,7 +265,7 @@ body {
   font-weight: 500;
   white-space: nowrap;
   padding-right: 0 !important;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 
@@ -414,17 +427,10 @@ figure {
   position: fixed; /* Make it stick/fixed */
   top: -100px; /* Hide the navbar 50 px outside of the top view */
   width: 100%; /* Full width */
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  transition: top 0.8s; /* Transition effect when sliding down (and up) */
 }
 
-/* Style the navbar links */
-#inen-navbar a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-}
+
 
 
 /* farkli cihaz boylarinda farkli boyutta divler elde etmek icin*/
@@ -501,6 +507,13 @@ figure {
 }
 
 @media (max-width: 576px) {
+  .dil-indiricisi {
+    font-size: 0.7rem;
+  }
+  .bayrakk {
+    width: 19px;
+    height: 12px;
+  }
   footer h4 {
     font-size: 25px !important;
   }
@@ -600,5 +613,4 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
-
 

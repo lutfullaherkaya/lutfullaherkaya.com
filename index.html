@@ -18,7 +18,8 @@
     <script src="kutuphaneler/jquery.min.js"></script>
     <script src="kutuphaneler/bootstrap.min.js"></script>
     <script src="kutuphaneler/fontawesome.js"></script>
-    <script src="index_tercume.js"></script>
+    <script src="sozluk_index.js"></script>
+    <script src="tercume.js"></script>
 
     <link href="style.css" rel="stylesheet">
 </head>
@@ -38,7 +39,7 @@
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         document.getElementById("inen-navbar").style.top = "0";
       } else {
-        document.getElementById("inen-navbar").style.top = "-200px";
+        document.getElementById("inen-navbar").style.top = "-300px";
       }
     }
 </script>
@@ -49,8 +50,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="giris-baslik-yazilar">
-                <h1 class="">Lütfullah Erkaya</h1>
-                <p data-tercume="bil_muh">Bilgisayar Mühendisi</p>
+                <h1 id="giris-baslik-isim" class="">Lütfullah Erkaya</h1>
+                <p id="giris-baslik-nam" data-tercume="bil_muh">Bilgisayar Mühendisi</p>
             </div>
         </div>
 

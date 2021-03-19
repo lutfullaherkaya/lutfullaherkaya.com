@@ -7,7 +7,6 @@ var sozluk = {
         'tr': 'Lütfullah Erkaya | Resmi Site',
         'en': 'Lütfullah Erkaya | Official Website',
     },
-
     "xox_oyunu": {
         'tr': 'XOX Oyunu',
         'en': 'Tic-Tac-Toe',
@@ -22,23 +21,23 @@ var sozluk = {
     },
     "hosgeldiniz_p1": {
         'tr': 'Sizleri burada görebilmek gerçekten büyük bir onur. Şu an ziyadesiyle bahtiyar ve kıvanç doluyum.',
-        'en': 'bb'
+        'en': 'It is a truly great honor to see you here. I am full of happiness and joy right now.'
     },
     "hosgeldiniz_p2": {
-        'tr': 'Ayakta kalmayın, hemen yukarıdaki gezinme çubuğundan sizler için hazırladığım, komik grafik seçenekli XOX oyunumun tadına bakabilirsiniz. Aşağıda ise yaptıklarıma ve yapacaklarıma ulaşabileceğiniz linkler var.',
-        'en': 'bb'
+        'tr': 'Ayakta kalmayın, hemen yukarıdaki gezinme çubuğundan sizler için hazırladığım, kedi grafikli ve komikli XOX oyunumun tadına bakabilirsiniz. Aşağıda ise yaptıklarıma ve yapacaklarıma ulaşabileceğiniz linkler var.',
+        'en': 'Please, make yourself at home. Have a taste of the Tic-Tac-Toe I made just for you. It has funny cat graphics and good sound effects. You can reach it above from the navigation bar. And just below, you can access my work.'
     },
     "hosgeldiniz_p3": {
         'tr': 'Sarılmaya ihtiyacınız varsa eğer hemen ',
-        'en': 'bb '
+        'en': 'If you need a hug, I am '
     },
     "hosgeldiniz_p3_asagi": {
         'tr': 'aşağıdayım.',
-        'en': ' down.'
+        'en': 'just below.'
     },
     "hosgeldiniz_p3_sag": {
         'tr': 'sağdayım.',
-        'en': 'right.'
+        'en': 'right next to you.'
     },
     "sarilbuton": {
         'tr': 'Sarıl',
@@ -54,23 +53,23 @@ var sozluk = {
     },
     "benibulun": {
         'tr': 'Beni Bulun',
-        'en': 'Enough'
+        'en': 'Find Me'
     },
     "medium": {
         'tr': 'Burada yazılarım var.',
-        'en': 'Enough'
+        'en': 'I have my writings here.'
     },
     "githublink": {
         'tr': 'Bu sitenin kaynak kodu',
-        'en': 'Enough'
+        'en': 'In addition to the source code of this website,'
     },
     "github": {
         'tr': ' dahil küçük projelerim burada.',
-        'en': 'Enough'
+        'en': ' my small projects are here.'
     },
     "linkedin": {
         'tr': 'Bana buradan ulaşabilirsiniz.',
-        'en': 'Enough'
+        'en': 'You can reach me here.'
     },
     "iletisim": {
         'tr': 'İletişim',
@@ -82,22 +81,4 @@ var sozluk = {
     }
 };
 
-if (!(sessionStorage.getItem("suankidil"))) {
-    sessionStorage.setItem("suankidil", "tr");
-}
-function tercumeEt(dil) {
-    document.getElementById("dil-resmi-bir").src = dil + ".png";
-    document.getElementById("dil-resmi-iki").src = dil + ".png";
-    $("[data-tercume]").each(function () {
-        var key = $(this).data('tercume');
-        $(this).html(sozluk[key][dil] || "N/A");
-    });
-    $("html").attr("lang", dil);
-    sessionStorage.setItem("suankidil", dil);
-}
-function giristeDilAyarla() {
-    if (sessionStorage.getItem("suankidil") && sessionStorage.getItem("suankidil") !== "tr") {
-        tercumeEt(sessionStorage.getItem("suankidil"));
-    }
-    
-}
+

@@ -9,152 +9,150 @@ var sozluk = {
     },
     "zorluk_duzeyi": {
         'tr': 'Zorluk Düzeyi',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Difficulty',
     },
-
     "zor0": {
         'tr': 'Tüm tuşlara basan bot',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Bot that sits on the keyboard',
     },
     "zor0_20": {
         'tr': 'Akıl dağıtılırken şemsiye tutmuş bot',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Bot that put an umbrella when intellect was being distributed',
     },
     "zor20_40": {
         'tr': 'Çocuk oyuncağı bot',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Easy peasy bot',
     },
     "zor40_55": {
         'tr': 'Vasat bot',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Mediocre bot',
     },
     "zor55_70": {
         'tr': 'Yürek yemiş bot',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Bot with balls of steel',
     },
     "zor70_80": {
         'tr': 'Kulağını oynatabilen bot',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Bot with the ability to move ears',
     },
     "zor80_100": {
-        'tr': '8 yıl tekvando 13 yıl muay thai yapmış bot',
-        'en': 'Tic-Tac-Toe',
+        'tr': '2 yıl Tekvando 29 yıl Muay Thai yapmış bot',
+        'en': 'Bot with 2 years of Taekwondo and 29 years of Muay Thai experience ',
     },
     "zor100": {
         'tr': 'Kendini aşmış, zinhar yenilmez bot',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Bot that went beyond their limits and achieved perfection',
     },
 
     "grafiksecimi": {
         'tr': 'Grafik Seçimi',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Graphics Selection',
     },
     "yenidenbasla": {
         'tr': 'Yeniden Başla',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Start Over',
     },
     "galibiyet": {
         'tr': 'Galibiyet',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Wins',
     },
     "maglubiyet": {
         'tr': 'Mağlubiyet',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Loses',
     },
     "beraberiyet": {
         'tr': 'Beraberiyet',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Draws',
     },
 
     // grafik isimlerini tek tek yazmadim merak etmeyin dsfasdf script yazdim. tabii tum bu sozluk seysi tamamen issizlik, bunu da kabul etmek lazim. zaten tum bu site kulliyen issizlik. kimse bakmayacak zaten bunlara .d ama su soru insanin aklina geliyor, sanat toplum için midir, sanat sanat için midir?
     "klasikx": {
         'tr': 'Klasik X',
-        'en': 'en',
+        'en': 'Classical X',
     },
     "klasiko": {
         'tr': 'Klasik O',
-        'en': 'en',
+        'en': 'Classical O',
     },
     "diskokedi": {
         'tr': 'Diskocu Kedi',
-        'en': 'en',
+        'en': 'Disco Cat',
     },
     "halaykedi": {
         'tr': 'Halay Çeken Kedi',
-        'en': 'en',
+        'en': 'Pulling Halay Cat',
     },
     "biyiklikedi": {
         'tr': 'Bıyıklı Kedi',
-        'en': 'en',
+        'en': 'Moustache Cat',
     },
     "aynalikedi": {
-        'tr': 'Aynada Kedi',
-        'en': 'en',
+        'tr': 'Aynada Üzgün Kedi',
+        'en': 'Sad Cat in Mirror',
     },
     "epilepsikopek": {
         'tr': 'Epilepsi Köpek',
-        'en': 'en',
+        'en': 'Epilepsy Dog',
     },
     "danscibebek": {
         'tr': 'Dansçı Bebek',
-        'en': 'en',
+        'en': 'Dancer Baby',
     },
     "mahzunkermit": {
         'tr': 'Mahzun Kermit',
-        'en': 'en',
+        'en': 'Sad Kermit',
     },
     "polatalemdar": {
         'tr': 'Polat Alemdar',
-        'en': 'en',
+        'en': 'Polhorse Alemnarrow',
     },
     "istebu": {
         'tr': 'İşte bu',
-        'en': 'en',
+        'en': 'This is at work',
     },
-    
     "sunus": {
         'tr': 'XOX oyunumun nihai formunu sizlere iftiharla sunuyorum. Bu oyun nice alın terleriyle telif edilmiş ve önünüze konmuştur. Bu emeklere birinci elden tanık olmak ve şu icra ettiğim sanatın kodlarını incelemek isterseniz ',
-        'en': 'Tic-Tac-Toe',
+        'en': 'I am proudfully presenting you the final form of the Tic-Tac-Toe Game. This game was developed with blood, and sweat and tears. If you want to witness these efforts first hand and appreciate the codes of the art I have made, ',
     },
     "bulinke": {
         'tr': 'bu linke',
-        'en': 'Tic-Tac-Toe',
+        'en': 'you can click here.',
     },
     "tiklayabilirsiniz": {
         'tr': 'tıklayabilirsiniz.',
-        'en': 'Tic-Tac-Toe',
+        'en': '',
     },
     "yillaronce": {
         'tr': 'XOX oyununun yıllar önce yazdığım ',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Primitive version of the Tic-Tac-Toe game ',
     },
     "ilkelsurum": {
         'tr': 'ilkel sürümü',
-        'en': 'Tic-Tac-Toe',
+        'en': 'I have programmed years ago',
     },
     "ve": {
         'tr': ' ve ',
-        'en': 'Tic-Tac-Toe',
+        'en': ' and ',
     },
     "kaynakkodlari": {
         'tr': 'kaynak kodları',
-        'en': 'Tic-Tac-Toe',
+        'en': ' its source code.',
     },
     "icintiklayabilirsiniz": {
         'tr': ' için tıklayabilirsiniz.',
-        'en': 'Tic-Tac-Toe',
+        'en': ' is also there.',
     },
     "kazandin": {
         'tr': "Kazandınız :')",
-        'en': 'Tic-Tac-Toe',
+        'en': "You win :')",
     },
     "kaybettin": {
-        'tr': "Öldün :'(",
-        'en': 'Tic-Tac-Toe',
+        'tr': "ÖLDÜN",
+        'en': 'YOU DIED',
     },
     "berabere": {
         'tr': 'Berabere :|',
-        'en': 'Tic-Tac-Toe',
+        'en': 'Draw :|',
     },
     "iletisim": {
         'tr': 'İletişim',
@@ -167,23 +165,3 @@ var sozluk = {
 };
 
 
-if (!(sessionStorage.getItem("suankidil"))) {
-    sessionStorage.setItem("suankidil", "tr");
-}
-function tercumeEt(dil) {
-    document.getElementById("dil-resmi-bir").src = dil + ".png";
-    document.getElementById("dil-resmi-iki").src = dil + ".png";
-    $("[data-tercume]").each(function () {
-        var key = $(this).data('tercume');
-        $(this).html(sozluk[key][dil] || "N/A");
-    });
-    $("html").attr("lang", dil);
-    sessionStorage.setItem("suankidil", dil);
-}
-
-function giristeDilAyarla() {
-    if (sessionStorage.getItem("suankidil") && sessionStorage.getItem("suankidil") !== "tr") {
-        tercumeEt(sessionStorage.getItem("suankidil"));
-    }
-    
-}

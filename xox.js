@@ -166,58 +166,58 @@ function Oyun() {
 
     this.agaOyunBittiMiKontrolEtEgerBittiyseBitmeMesajiFalanGosterDarkSoulsEfektliMefektliEyvallah = function() {
         let bitis = false;
-        if (buOyun.oyuncu.eskiHamleler.length + buOyun.bot.eskiHamleler.length === 9) {
-            bitis = "berabere";
-        } else {
-            let isaretler = ["x", "o"];
-            for (let isrt = 0; isrt < 2; ++isrt) {
-                let kazananSira = isaretler[isrt]+isaretler[isrt]+isaretler[isrt];
-                // normalde kazanma durumunu belirledigi anda break yapacaktim
-                // ama ve lakin zaten yapacagi topu topu 8 tane islem, O(1) yani havalı terimlerle ifade etmek gerekirse :P
-                for (let i = 0; i < 3; ++i) {
-                    // satir
-                    if (buOyun.matris[i].join("") === kazananSira) {
-                        bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
-                    }
-                    // sutun
-                    if (buOyun.matris[0][i]+buOyun.matris[1][i]+buOyun.matris[2][i] === kazananSira) {
-                        bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
-                    }
-                }
-                // capraz
-                if ((buOyun.matris[0][0]+buOyun.matris[1][1]+buOyun.matris[2][2]) === kazananSira) {
+        let isaretler = ["x", "o"];
+        for (let isrt = 0; isrt < 2; ++isrt) {
+            let kazananSira = isaretler[isrt]+isaretler[isrt]+isaretler[isrt];
+            // normalde kazanma durumunu belirledigi anda break yapacaktim
+            // ama ve lakin zaten yapacagi topu topu 8 tane islem, O(1) yani havalı terimlerle ifade etmek gerekirse :P
+            for (let i = 0; i < 3; ++i) {
+                // satir
+                if (buOyun.matris[i].join("") === kazananSira) {
                     bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
                 }
-                if ((buOyun.matris[0][2]+buOyun.matris[1][1]+buOyun.matris[2][0]) === kazananSira) {
+                // sutun
+                if (buOyun.matris[0][i]+buOyun.matris[1][i]+buOyun.matris[2][i] === kazananSira) {
                     bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
                 }
+            }
+            // capraz
+            if ((buOyun.matris[0][0]+buOyun.matris[1][1]+buOyun.matris[2][2]) === kazananSira) {
+                bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
+            }
+            if ((buOyun.matris[0][2]+buOyun.matris[1][1]+buOyun.matris[2][0]) === kazananSira) {
+                bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
             }
         }
         if (bitis === false) {
-            return false;
-        } else {
-            let bitisler = {
-                oyuncu: {yazianahtari: "kazandin", skorTablosu:"skorGalibiyet", ses:"sesler/kazandinzafersarkisi.mp3"},
-                bot: {yazianahtari: "kaybettin", skorTablosu:"skorMaglubiyet", ses:"sesler/oldun.mp3"},
-                berabere: {yazianahtari: "berabere", skorTablosu:"skorBeraberiyet", ses:"sesler/berabere.mp3"}
-            };
-            document.getElementById(bitisler[bitis].skorTablosu).innerHTML = (++this.skorlar[bitisler[bitis].skorTablosu]).toString();
-            document.getElementById(bitisler[bitis].skorTablosu+"Kucuk").innerHTML = (this.skorlar[bitisler[bitis].skorTablosu]).toString();
-            buOyun.sesCal(bitisler[bitis].ses, true);
-            if (bitis === "oyuncu") {
-                buOyun.sesCal("sesler/kazandin.mp3");
+            if (buOyun.oyuncu.eskiHamleler.length + buOyun.bot.eskiHamleler.length === 9) {
+                bitis = "berabere";
+            } else {
+                return false;
             }
-            if (bitis === "bot") {
-                document.getElementById("oyun-bitme-mesaji").className = "oldun";
-            }
-            document.getElementById("oyun-bitme-mesaji").setAttribute("data-tercume", bitisler[bitis].yazianahtari);
-            let simdikidil = sessionStorage.getItem("suankidil") ? sessionStorage.getItem("suankidil") : "tr";
-            document.getElementById("oyun-bitme-mesaji").innerHTML = sozluk[bitisler[bitis].yazianahtari][simdikidil];
-            document.getElementById("winningMessage").className = "winning-message show";
-
-
-            return true;
         }
+        let bitisler = {
+            oyuncu: {yazianahtari: "kazandin", skorTablosu:"skorGalibiyet", ses:"sesler/kazandinzafersarkisi.mp3"},
+            bot: {yazianahtari: "kaybettin", skorTablosu:"skorMaglubiyet", ses:"sesler/oldun.mp3"},
+            berabere: {yazianahtari: "berabere", skorTablosu:"skorBeraberiyet", ses:"sesler/berabere.mp3"}
+        };
+        document.getElementById(bitisler[bitis].skorTablosu).innerHTML = (++this.skorlar[bitisler[bitis].skorTablosu]).toString();
+        document.getElementById(bitisler[bitis].skorTablosu+"Kucuk").innerHTML = (this.skorlar[bitisler[bitis].skorTablosu]).toString();
+        buOyun.sesCal(bitisler[bitis].ses, true);
+        if (bitis === "oyuncu") {
+            buOyun.sesCal("sesler/kazandin.mp3");
+        }
+        if (bitis === "bot") {
+            document.getElementById("oyun-bitme-mesaji").className = "oldun";
+        }
+        document.getElementById("oyun-bitme-mesaji").setAttribute("data-tercume", bitisler[bitis].yazianahtari);
+        let simdikidil = sessionStorage.getItem("suankidil") ? sessionStorage.getItem("suankidil") : "tr";
+        document.getElementById("oyun-bitme-mesaji").innerHTML = sozlugeBak(bitisler[bitis].yazianahtari, simdikidil);
+        document.getElementById("winningMessage").className = "winning-message show";
+
+
+        return true;
+
 
     };
 
@@ -347,7 +347,7 @@ function Oyun() {
             buOyun.sallaAbiSalla(document.getElementById("xox-tablosu"))
         }
         zorlukYazi.setAttribute("data-tercume", zorlukSozlukAnahtari);
-        zorlukYazi.innerHTML = sozluk[zorlukSozlukAnahtari][simdikidil];
+        zorlukYazi.innerHTML = sozlugeBak(zorlukSozlukAnahtari, simdikidil);
     };
 
     this.bot = {
