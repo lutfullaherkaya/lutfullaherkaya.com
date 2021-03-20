@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
 
 :root {
   --kenar-rengi: #fff9ef;
@@ -10,13 +10,13 @@
   --giris-yazi-rengi: #EDFFEC;
 
   --yazi-rengi: #EDFFEC;
-  --logo-ve-navbar-yazi-rengi: #fcffd7;
+  --logo-ve-navbar-yazi-rengi: #eac2ec;
   
   --inen-navbar-rengi: #7f2928fb;
 
-  --navbar-active-rengi: #edffecb7;
+  --navbar-active-rengi: #b9a4bd;
 
-  --sosyal-ikon-rengi: #b8ec7d;
+  --sosyal-ikon-rengi: rgba(233, 195, 235, 0.85);
 
   --footer-arkaplan:#1f1f1dea;
   --footer-yazi-rengi: #c3ccc2;
@@ -129,7 +129,7 @@ html, body {
 }
 body {
   background-color: #5c1d1c;
-  background-image: url("wallhaven-4ylxyg.jpg");
+  background-image: url("../resimler/wallhaven-4ylxyg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,7 +212,7 @@ body {
 .parallax {
   /* The image used */
   /* Set a specific height */
-  background-image: url("wallhaven-4gw97n.jpg");
+  background-image: url("../resimler/wallhaven-4gw97n.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -407,7 +407,7 @@ figure {
   height: 100%;
 }
 #fixed {
-  background-image: url('wallhaven-4ylxyg.jpg');
+  background-image: url('../resimler/wallhaven-4ylxyg.jpg');
   position: fixed;
   display: block;
   top: 0;
@@ -507,6 +507,10 @@ figure {
 }
 
 @media (max-width: 576px) {
+  .logo, .nav-link {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-top: 4px !important;
+  }
   .dil-indiricisi {
     font-size: 0.7rem;
   }
@@ -530,7 +534,7 @@ figure {
     font-size: 160%;
   }
   .logo, .nav-link {
-    font-size: 3.6vw;
+    font-size: 4.5vw;
   }
   .asagi-padding-5-2 {
     padding-bottom: 1.3rem;
@@ -568,9 +572,7 @@ figure {
   .hos-gelme-yeni p, #lutfullah-erkaya-konumu-sag, #lutfullah-erkaya-konumu-asagi, #le-konum-paragraf {
     font-size: 16px;
   }
-  .nav-link {
-    white-space: normal ;
-  }
+
   .giris-baslik-yazilar p {
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
@@ -585,6 +587,12 @@ figure {
   }
 }
 
+@media (max-width: 360px) {
+  .nav-link {
+    white-space: normal ;
+  }
+
+}
 @media (max-width: 280px) {
   .nav-link {
     white-space: normal ;

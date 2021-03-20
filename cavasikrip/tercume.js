@@ -58,8 +58,8 @@ function sozlugeBak(anahtar, dil) {
 }
 
 function tercumeEt(dil) {
-    document.getElementById("dil-resmi-bir").src = dil + ".png";
-    document.getElementById("dil-resmi-iki").src = dil + ".png";
+    document.getElementById("dil-resmi-bir").src = "resimler/" + dil + ".png";
+    document.getElementById("dil-resmi-iki").src = "resimler/" + dil + ".png";
     $("[data-tercume]").each(function () {
         var anahtar = $(this).data('tercume');
         if (sozluk[anahtar][dil] === "") {
@@ -69,8 +69,8 @@ function tercumeEt(dil) {
         }
     });
     if (dil === "kd") {
-        $('html').css({"font-family": "'Truculenta', sans-serif"});
-        $('body').css({"font-family": "'Truculenta', sans-serif"});
+        $('html').css({"font-family": "'Yanone Kaffeesatz', sans-serif"});
+        $('body').css({"font-family": "'Yanone Kaffeesatz', sans-serif"});
         if (document.getElementById("giris-baslik-nam")) {
             document.getElementById("giris-baslik-nam").className = "stroke-yok";
             document.getElementById("giris-baslik-isim").className = "stroke-yok";

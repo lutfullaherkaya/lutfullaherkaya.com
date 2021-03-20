@@ -136,7 +136,7 @@ var sozluk = {
     },
     "kaynakkodlari": {
         'tr': 'kaynak kodları',
-        'en': ' its source code.',
+        'en': ' its source code',
     },
     "icintiklayabilirsiniz": {
         'tr': ' için tıklayabilirsiniz.',

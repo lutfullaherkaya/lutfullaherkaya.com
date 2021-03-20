@@ -3,28 +3,28 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Lütfullah Erkaya | XOX</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="ikon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="ikon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="ikon/favicon-16x16.png">
-    <link rel="shortcut icon" href="ikon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="ikon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link href="resimler/ikon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="resimler/ikon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="resimler/ikon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="resimler/ikon/favicon.ico" rel="shortcut icon">
+    <meta content="#da532c" name="msapplication-TileColor">
+    <meta content="ikon/browserconfig.xml" name="msapplication-config">
+    <meta content="#ffffff" name="theme-color">
 
-    <link rel="stylesheet" href="kutuphaneler/bootstrap.min.css">
-    <script src="kutuphaneler/jquery.min.js"></script>
-    <script src="kutuphaneler/bootstrap.min.js"></script>
-    <script src="kutuphaneler/fontawesome.js"></script>
+    <link href="sieses/bootstrap.min.css" rel="stylesheet">
+    <script src="cavasikrip/jquery.min.js"></script>
+    <script src="cavasikrip/bootstrap.min.js"></script>
+    <script src="cavasikrip/fontawesome.js"></script>
 
-    <link href="style.css" rel="stylesheet">
-    <link href="xoxstyles.css" rel="stylesheet">
-    <script src="xox.js" defer></script>
-    <script src="sozluk_xoxoyunu.js"></script>
-    <script src="tercume.js"></script>
-    
+    <link href="sieses/genelstil.css" rel="stylesheet">
+    <link href="sieses/xoxoyunustil.css" rel="stylesheet">
+    <script defer src="cavasikrip/xox.js"></script>
+    <script src="cavasikrip/sozluk_xoxoyunu.js"></script>
+    <script src="cavasikrip/tercume.js"></script>
+
 </head>
 
 <body onload="giristeDilAyarla()">
@@ -43,57 +43,84 @@
     <div class="container pad-0-bottom pad-0-left pad-0-right pad-0-top">
         <!-- baslik -->
         <div class="text-center hosgeldiniz pt-sm-0 pt-md-2" id="xox-baslik-div">
-            <h1 id="xox-baslik" class="xox-yazi " data-tercume="xox_oyunu">XOX Oyunu</h1>
+            <h1 class="xox-yazi " data-tercume="xox_oyunu" id="xox-baslik">XOX Oyunu</h1>
         </div>
 
 
         <div class="row justify-content-center">
 
             <!-- xox tablosu -->
-            <div id="xox-tablosu" class="col-md-6 col-lg-5 pad-0-right-lg align-self-center">
+            <div class="col-md-6 col-lg-5 pad-0-right-lg align-self-center" id="xox-tablosu">
                 <div class="flash gizli"></div>
-                <table id="xox_table" class="xox_table">
+                <table class="xox_table" id="xox_table">
                     <tr class="xox_table_row">
-                        <td class="xox-table-td"><img id="00" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
-                        <td class="xox-table-td"><img id="01" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
-                        <td class="xox-table-td"><img id="02" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="00"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="01"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="02"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
                     </tr>
                     <tr class="xox_table_row">
-                        <td class="xox-table-td"><img id="10" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
-                        <td class="xox-table-td"><img id="11" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
-                        <td class="xox-table-td"><img id="12" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="10"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="11"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="12"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
                     </tr>
                     <tr class="xox_table_row">
-                        <td class="xox-table-td"><img id="20" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
-                        <td class="xox-table-td"><img id="21" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
-                        <td class="xox-table-td"><img id="22" alt="xox oyunu hucre resmi"
-                                                      class="hucre bos hucre-animasyon-yok"
-                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);" onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
-                                                      onclick="oyun.oyuncu.tiklama(id)" src="resimler/bos.png"></td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="20"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="21"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
+                        <td class="xox-table-td"><img alt="xox oyunu hucre resmi" class="hucre bos hucre-animasyon-yok"
+                                                      id="22"
+                                                      onclick="oyun.oyuncu.tiklama(id)"
+                                                      onmouseout="oyun.oyuncu.fareyiCekme(this, id);"
+                                                      onmouseover="oyun.oyuncu.fareyiGezdirme(this, id);"
+                                                      src="resimler/xoxoyunu/bos.png">
+                        </td>
 
                     </tr>
                 </table>
@@ -101,63 +128,101 @@
 
 
             <!-- Sag panel -->
-            <div id="xox-dashboard" class="col-md-6 col-lg-7  pl-sm-2 pl-md-0 align-self-center pt-sm-0 pt-md-3">
+            <div class="col-md-6 col-lg-7  pl-sm-2 pl-md-0 align-self-center pt-sm-0 pt-md-3" id="xox-dashboard">
 
                 <!-- zorluk duzeyi -->
                 <div class="pad-15px-bottom">
                     <div class="text-center"><h4 class="xox-yazi" data-tercume="zorluk_duzeyi">Zorluk Düzeyi</h4></div>
                     <div class="slidecontainer">
-                        <input type="range" min="0" max="100" value="50" class="slider" id="zorlukDuzeyiRange">
+                        <input class="slider" id="zorlukDuzeyiRange" max="100" min="0" type="range" value="50">
                     </div>
-                    <div class="text-center"><p id="zorlukDuzeyiYazi" class="xox-yazi xox-zorluk-yazi m-0" data-tercume="zor40_55">Vasat bot</p></div>
+                    <div class="text-center"><p class="xox-yazi xox-zorluk-yazi m-0" data-tercume="zor40_55"
+                                                id="zorlukDuzeyiYazi">Vasat bot</p></div>
                 </div>
 
                 <!-- grafik secimi -->
                 <div class="pad-15px-bottom">
                     <div class=" xox-yazi grafikle-sesayari">
-                        <h4 style="align-self: center;" data-tercume="grafiksecimi">Grafik Seçimi</h4>
-                        <span id="ses-ayari" class="ses-ayari pb-1">
-                            <i id="azses" class="fa fa-volume-down mr-2"></i>
+                        <h4 data-tercume="grafiksecimi" style="align-self: center;">Grafik Seçimi</h4>
+                        <span class="ses-ayari pb-1" id="ses-ayari">
+                            <i class="fa fa-volume-down mr-2" id="azses"></i>
                             <span class="slidecontainer">
-                            <input type="range" min="0" max="1" value="1" step="0.01" class="ses-slider slider" id="sesRange">
+                            <input class="ses-slider slider" id="sesRange" max="1" min="0" step="0.01" type="range"
+                                   value="1">
                             </span>
-                            <i id="cokses" class="fa fa-volume-up ml-2"></i>
+                            <i class="fa fa-volume-up ml-2" id="cokses"></i>
                         </span>
                     </div>
                     <div class="wrapper padding-top-sifir ">
                         <div class="outer">
                             <div class="itemwrapper rightpad">
                                 <!-- x grafigi sec -->
-                                <select class="form-control form-control-lg" name="grafikler" id="grafiklerx"
+                                <select class="form-control form-control-lg" id="grafiklerx" name="grafikler"
                                         onchange="oyun.grafikDegistir('x')">
-                                    <option class="xGrafikDegistir" data-tercume="klasikx" value="klasikx">Klasik X</option>
-                                    <option class="xGrafikDegistir" data-tercume="diskokedi" value="diskokedi">Diskocu Kedi</option>
-                                    <option class="xGrafikDegistir" data-tercume="halaykedi" value="halaykedi">Halay Çeken Kedi</option>
-                                    <option class="xGrafikDegistir" data-tercume="biyiklikedi" value="biyiklikedi">Bıyıklı Kedi</option>
-                                    <option class="xGrafikDegistir" data-tercume="aynalikedi" value="aynalikedi">Aynada Kedi</option>
-                                    <option class="xGrafikDegistir" data-tercume="epilepsikopek" value="epilepsikopek">Epilepsi Köpek</option>
-                                    <option class="xGrafikDegistir" data-tercume="danscibebek" value="danscibebek">Dansçı Bebek</option>
-                                    <option class="xGrafikDegistir" data-tercume="mahzunkermit" value="mahzunkermit">Mahzun Kermit</option>
-                                    <option class="xGrafikDegistir" data-tercume="polatalemdar" value="polatalemdar">Polat Alemdar</option>
-                                    <option class="xGrafikDegistir" data-tercume="istebu" value="istebu">İşte bu</option>
+                                    <option class="xGrafikDegistir" data-tercume="klasikx" value="klasikx">Klasik X
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="diskokedi" value="diskokedi">Diskocu
+                                        Kedi
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="halaykedi" value="halaykedi">Halay
+                                        Çeken Kedi
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="biyiklikedi" value="biyiklikedi">
+                                        Bıyıklı Kedi
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="aynalikedi" value="aynalikedi">Aynada
+                                        Kedi
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="epilepsikopek" value="epilepsikopek">
+                                        Epilepsi Köpek
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="danscibebek" value="danscibebek">
+                                        Dansçı Bebek
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="mahzunkermit" value="mahzunkermit">
+                                        Mahzun Kermit
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="polatalemdar" value="polatalemdar">
+                                        Polat Alemdar
+                                    </option>
+                                    <option class="xGrafikDegistir" data-tercume="istebu" value="istebu">İşte bu
+                                    </option>
 
                                 </select>
 
                             </div>
                             <div class="itemwrapper leftpad">
                                 <!-- o grafigi sec -->
-                                <select class="form-control form-control-lg" name="grafikler" id="grafiklero"
+                                <select class="form-control form-control-lg" id="grafiklero" name="grafikler"
                                         onchange="oyun.grafikDegistir('o')">
-                                    <option class="oGrafikDegistir" data-tercume="klasiko" value="klasiko">Klasik O</option>
-                                    <option class="oGrafikDegistir" data-tercume="diskokedi" value="diskokedi">Diskocu Kedi</option>
-                                    <option class="oGrafikDegistir" data-tercume="halaykedi" value="halaykedi">Halay Çeken Kedi</option>
-                                    <option class="oGrafikDegistir" data-tercume="biyiklikedi" value="biyiklikedi">Bıyıklı Kedi</option>
-                                    <option class="oGrafikDegistir" data-tercume="aynalikedi" value="aynalikedi">Aynada Kedi</option>
-                                    <option class="oGrafikDegistir" data-tercume="epilepsikopek" value="epilepsikopek">Epilepsi Köpek</option>
-                                    <option class="oGrafikDegistir" data-tercume="danscibebek" value="danscibebek">Dansçı Bebek</option>
-                                    <option class="oGrafikDegistir" data-tercume="mahzunkermit" value="mahzunkermit">Mahzun Kermit</option>
-                                    <option class="oGrafikDegistir" data-tercume="polatalemdar" value="polatalemdar">Polat Alemdar</option>
-                                    <option class="oGrafikDegistir" data-tercume="istebu" value="istebu">İşte bu</option>
+                                    <option class="oGrafikDegistir" data-tercume="klasiko" value="klasiko">Klasik O
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="diskokedi" value="diskokedi">Diskocu
+                                        Kedi
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="halaykedi" value="halaykedi">Halay
+                                        Çeken Kedi
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="biyiklikedi" value="biyiklikedi">
+                                        Bıyıklı Kedi
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="aynalikedi" value="aynalikedi">Aynada
+                                        Kedi
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="epilepsikopek" value="epilepsikopek">
+                                        Epilepsi Köpek
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="danscibebek" value="danscibebek">
+                                        Dansçı Bebek
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="mahzunkermit" value="mahzunkermit">
+                                        Mahzun Kermit
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="polatalemdar" value="polatalemdar">
+                                        Polat Alemdar
+                                    </option>
+                                    <option class="oGrafikDegistir" data-tercume="istebu" value="istebu">İşte bu
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -170,14 +235,15 @@
                     <div class="wrapper padding-top-sifir">
                         <div class="outer">
                             <div class="itemwrapper rightpad">
-                                <button type="button" class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('x');">
+                                <button class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('x');"
+                                        type="button">
                                     <div class="row justify-content-center y-basla-yazi-divde-dikortala">
                                         <table class="btn-img-table">
                                             <tr class="xox_table_row">
                                                 <td class="btn-img-table-td"><img
-                                                        class="btn-img-hucre btn-img-hucre-dashboard"
                                                         alt="yeniden baslama butonu resmi"
-                                                        src="resimler/x.png" id="tekrarXButon">
+                                                        class="btn-img-hucre btn-img-hucre-dashboard"
+                                                        id="tekrarXButon" src="resimler/xoxoyunu/x.png">
                                                 </td>
                                             </tr>
 
@@ -189,14 +255,15 @@
 
                             </div>
                             <div class="itemwrapper leftpad">
-                                <button type="button" class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('o')">
+                                <button class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('o')"
+                                        type="button">
                                     <div class="row justify-content-center y-basla-yazi-divde-dikortala">
                                         <table class="btn-img-table">
                                             <tr class="xox_table_row">
                                                 <td class="btn-img-table-td"><img
-                                                        class="btn-img-hucre btn-img-hucre-dashboard"
                                                         alt="yeniden baslama butonu resmi"
-                                                        src="resimler/o.png" id="tekrarOButon">
+                                                        class="btn-img-hucre btn-img-hucre-dashboard"
+                                                        id="tekrarOButon" src="resimler/xoxoyunu/o.png">
                                                 </td>
                                             </tr>
 
@@ -211,7 +278,7 @@
 
 
                 <!-- skorlar -->
-                <table id="skor-buyuk" class="table table-dark skor-tablosu">
+                <table class="table table-dark skor-tablosu" id="skor-buyuk">
                     <tbody>
                     <tr>
                         <td class="skor-yazi text-center xox-yazi" data-tercume="galibiyet">Galibiyet</td>
@@ -219,25 +286,25 @@
                         <td class="skor-yazi text-center xox-yazi" data-tercume="beraberiyet">Beraberiyet</td>
                     </tr>
                     <tr>
-                        <td id="skorGalibiyet" class="skor-sayi text-center xox-yazi">0</td>
-                        <td id="skorMaglubiyet" class="skor-sayi text-center xox-yazi">0</td>
-                        <td id="skorBeraberiyet" class="skor-sayi text-center xox-yazi">0</td>
+                        <td class="skor-sayi text-center xox-yazi" id="skorGalibiyet">0</td>
+                        <td class="skor-sayi text-center xox-yazi" id="skorMaglubiyet">0</td>
+                        <td class="skor-sayi text-center xox-yazi" id="skorBeraberiyet">0</td>
                     </tr>
                     </tbody>
                 </table>
-                <table id="skor-kucuk" class="table table-dark skor-tablosu">
+                <table class="table table-dark skor-tablosu" id="skor-kucuk">
                     <tbody>
                     <tr>
                         <td class="skor-yazi text-center xox-yazi" data-tercume="galibiyet">Galibiyet</td>
-                        <td id="skorGalibiyetKucuk" class="skor-sayi text-center xox-yazi">0</td>
+                        <td class="skor-sayi text-center xox-yazi" id="skorGalibiyetKucuk">0</td>
                     </tr>
                     <tr>
                         <td class="skor-yazi text-center xox-yazi" data-tercume="maglubiyet">Mağlubiyet</td>
-                        <td id="skorMaglubiyetKucuk" class="skor-sayi text-center xox-yazi">0</td>
+                        <td class="skor-sayi text-center xox-yazi" id="skorMaglubiyetKucuk">0</td>
                     </tr>
                     <tr>
                         <td class="skor-yazi text-center xox-yazi" data-tercume="beraberiyet">Beraberiyet</td>
-                        <td id="skorBeraberiyetKucuk" class="skor-sayi text-center xox-yazi">0</td>
+                        <td class="skor-sayi text-center xox-yazi" id="skorBeraberiyetKucuk">0</td>
                     </tr>
                     </tbody>
                 </table>
@@ -245,10 +312,18 @@
 
         </div>
         <div class="col-12 text-center">
-            <p><span data-tercume="sunus">XOX oyunumun nihai formunu sizlere iftiharla sunuyorum. Bu oyun nice alın terleriyle telif edilmiş ve önünüze konmuştur. Bu emeklere birinci elden tanık olmak ve şu icra ettiğim sanatın kodlarını incelemek isterseniz </span><a class="xox-linkler" href="https://github.com/lutfullaherkaya/lutfullaherkaya.com"><span data-tercume="bulinke">bu linke</span></a> <span data-tercume="tiklayabilirsiniz">tıklayabilirsiniz.</span></p>
-            <p><span data-tercume="yillaronce">XOX oyununun yıllar önce yazdığım </span><a class="xox-linkler" href="http://xoxoyunu.getenjoyment.net" data-tercume="ilkelsurum">ilkel
+            <p><span data-tercume="sunus">XOX oyunumun nihai formunu sizlere iftiharla sunuyorum. Bu oyun nice alın terleriyle telif edilmiş ve önünüze konmuştur. Bu emeklere birinci elden tanık olmak ve şu icra ettiğim sanatın kodlarını incelemek isterseniz </span><a
+                    class="xox-linkler" href="https://github.com/lutfullaherkaya/lutfullaherkaya.com"><span
+                    data-tercume="bulinke">bu linke</span></a> <span
+                    data-tercume="tiklayabilirsiniz">tıklayabilirsiniz.</span></p>
+            <p><span data-tercume="yillaronce">XOX oyununun yıllar önce yazdığım </span><a class="xox-linkler"
+                                                                                           data-tercume="ilkelsurum"
+                                                                                           href="http://xoxoyunu.getenjoyment.net">ilkel
                 sürümü</a><span data-tercume="ve"> ve </span><a
-                    class="xox-linkler" href="https://github.com/lutfullaherkaya/xox-oyunu" data-tercume="kaynakkodlari">kaynak kodları</a>  <span data-tercume="icintiklayabilirsiniz"> için tıklayabilirsiniz.</span></p>
+                    class="xox-linkler" data-tercume="kaynakkodlari"
+                    href="https://github.com/lutfullaherkaya/xox-oyunu">kaynak kodları</a> <span
+                    data-tercume="icintiklayabilirsiniz"> için tıklayabilirsiniz.</span>
+            </p>
         </div>
 
 
@@ -268,17 +343,17 @@
 <!-- oyun bitis ekrani -->
 
 <div class="winning-message" id="winningMessage">
-    <div id="oyun-bitme-mesaji" data-tercume="berabere"></div>
-    <div id="wrapper" class="oyunbitmeekranibutonlar pad-30px-top">
+    <div data-tercume="berabere" id="oyun-bitme-mesaji"></div>
+    <div class="oyunbitmeekranibutonlar pad-30px-top" id="wrapper">
         <div class="outer">
             <div class="itemwrapper rightpad pl-3">
-                <button type="button" class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('x');">
+                <button class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('x');" type="button">
                     <div class="row justify-content-center y-basla-yazi-divde-dikortala">
                         <table class="btn-img-table">
                             <tr class="xox_table_row">
                                 <td class="btn-img-table-td"><img alt="yeniden baslama butonu resmi"
-                                                                  class="btn-img-hucre" src="resimler/x.png"
-                                                                  id="oyunBitisXButon"></td>
+                                                                  class="btn-img-hucre" id="oyunBitisXButon"
+                                                                  src="resimler/xoxoyunu/x.png"></td>
                             </tr>
 
                         </table>
@@ -289,13 +364,13 @@
 
             </div>
             <div class="itemwrapper leftpad pr-3">
-                <button type="button" class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('o')">
+                <button class="btn btn-primary y-basla-btn" onclick="oyun.yenidenBaslat('o')" type="button">
                     <div class="row justify-content-center y-basla-yazi-divde-dikortala">
                         <table class="btn-img-table">
                             <tr class="xox_table_row">
                                 <td class="btn-img-table-td"><img alt="yeniden baslama butonu resmi"
-                                                                  class="btn-img-hucre" src="resimler/o.png"
-                                                                  id="oyunBitisOButon"></td>
+                                                                  class="btn-img-hucre" id="oyunBitisOButon"
+                                                                  src="resimler/xoxoyunu/o.png"></td>
                             </tr>
 
                         </table>

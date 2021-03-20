@@ -1,78 +1,82 @@
-<nav class="navbar navbar-expand sticky-top navbar-light bg-light navbar-rengi " >
-	<div class="container">
-		<a class="navbar-brand navbar-logo-linki logo p-0 m-0" href="index.html">lutfullaherkaya.com</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li style="display: flex; align-items: center; justify-content: center;">
-					<div class="dropdown d-inline"><a class="btn btn-default dropdown-toggle dil-indiricisi" data-toggle="dropdown" href="#0" aria-expanded="false">
-						<img id="dil-resmi-bir" class="bayrakk" src="tr.png" height="21" alt="tr" width="32">
-						<span class="sr-only"> Türkçe</span></a>
-						<div class="dropdown-menu dropdown-menu-right">
-						<a href="#0" onclick="tercumeEt('tr')" class="dropdown-item">
-							<img src="tr.png" height="21" alt="tr" width="32"> Türkçe
-						</a>
-						<a href="#0" onclick="tercumeEt('en')" class="dropdown-item">
-							<img src="en.png" height="21" alt="en" width="32"> English
-						</a>
-						<a href="#0" onclick="tercumeEt('kd')" class="dropdown-item">
-							<img src="kd.png" height="21" alt="kd" width="32"> Kuguş Digiligi
-						</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="index.html" data-tercume="ana_sayfa">Ana Sayfa</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="xoxoyunu.html" data-tercume="xox_oyunu">XOX Oyunu</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+<nav class="navbar navbar-expand sticky-top navbar-light bg-light navbar-rengi ">
+    <div class="container">
+        <a class="navbar-brand navbar-logo-linki logo p-0 m-0" href="index.html">lutfullaherkaya.com</a>
+        <button class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li style="display: flex; align-items: center; justify-content: center;">
+                    <div class="dropdown d-inline"><a aria-expanded="false"
+                                                      class="btn btn-default dropdown-toggle dil-indiricisi" data-toggle="dropdown" href="#0">
+                        <img alt="tr" class="bayrakk" height="21" id="dil-resmi-bir" src="resimler/tr.png" width="32">
+                        <span class="sr-only"> Türkçe</span></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#0" onclick="tercumeEt('tr')">
+                                <img alt="tr" height="21" src="resimler/tr.png" width="32"> Türkçe
+                            </a>
+                            <a class="dropdown-item" href="#0" onclick="tercumeEt('en')">
+                                <img alt="en" height="21" src="resimler/en.png" width="32"> English
+                            </a>
+                            <a class="dropdown-item" href="#0" onclick="tercumeEt('kd')">
+                                <img alt="kd" height="21" src="resimler/kd.png" width="32"> Kuguş Digiligi
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-tercume="ana_sayfa" href="index.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-tercume="xox_oyunu" href="xoxoyunu.html">XOX Oyunu</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <!-- kaydirinca bir tane daha navbar gelsin diye ikinci navbar -->
-<nav id="inen-navbar" class="navbar navbar-expand sticky-top navbar-light bg-light navbar-rengi ">
-	<div class="container">
-		<a class="navbar-brand navbar-logo-linki logo p-0 m-0" href="index.html">lutfullaherkaya.com</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsiveKaydirinca">
-			<ul class="navbar-nav ml-auto">
-				<li style="display: flex; align-items: center; justify-content: center;">
-					<div class="dropdown d-inline"><a class="btn btn-default dropdown-toggle dil-indiricisi" data-toggle="dropdown" href="#0" aria-expanded="false">
-						<img id="dil-resmi-iki" class="bayrakk" src="tr.png" height="21" alt="tr" width="32">
-						<span class="sr-only"> Türkçe</span></a>
-						<div class="dropdown-menu dropdown-menu-right">
-						<a href="#0" onclick="tercumeEt('tr')" class="dropdown-item">
-							<img src="tr.png" height="21" alt="tr" width="32"> Türkçe
-						</a>
-						<a href="#0" onclick="tercumeEt('en')" class="dropdown-item">
-							<img src="en.png" height="21" alt="en" width="32"> English
-						</a>
-						<a href="#0" onclick="tercumeEt('kd')" class="dropdown-item">
-							<img src="kd.png" height="21" alt="kd" width="32"> Kuguş Digiligi
-						</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="index.html" data-tercume="ana_sayfa">Ana Sayfa</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="xoxoyunu.html" data-tercume="xox_oyunu">XOX Oyunu</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+<nav class="navbar navbar-expand sticky-top navbar-light bg-light navbar-rengi " id="inen-navbar">
+    <div class="container">
+        <a class="navbar-brand navbar-logo-linki logo p-0 m-0" href="index.html">lutfullaherkaya.com</a>
+        <button class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsiveKaydirinca">
+            <ul class="navbar-nav ml-auto">
+                <li style="display: flex; align-items: center; justify-content: center;">
+                    <div class="dropdown d-inline"><a aria-expanded="false"
+                                                      class="btn btn-default dropdown-toggle dil-indiricisi" data-toggle="dropdown" href="#0">
+                        <img alt="tr" class="bayrakk" height="21" id="dil-resmi-iki" src="resimler/tr.png" width="32">
+                        <span class="sr-only"> Türkçe</span></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#0" onclick="tercumeEt('tr')">
+                                <img alt="tr" height="21" src="resimler/tr.png" width="32"> Türkçe
+                            </a>
+                            <a class="dropdown-item" href="#0" onclick="tercumeEt('en')">
+                                <img alt="en" height="21" src="resimler/en.png" width="32"> English
+                            </a>
+                            <a class="dropdown-item" href="#0" onclick="tercumeEt('kd')">
+                                <img alt="kd" height="21" src="resimler/kd.png" width="32"> Kuguş Digiligi
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-tercume="ana_sayfa" href="index.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-tercume="xox_oyunu" href="xoxoyunu.html">XOX Oyunu</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <script>
-	$('img').on('dragstart', function(event) { event.preventDefault(); });
+    $('img').on('dragstart', function (event) {
+        event.preventDefault();
+    });
     let gezinmeCubuguLinkleri = document.getElementsByClassName("nav-link");
     for (let i = 0; i < gezinmeCubuguLinkleri.length; ++i) {
         if (gezinmeCubuguLinkleri[i].href.split("/").pop() == window.location.pathname.split("/").pop()) {

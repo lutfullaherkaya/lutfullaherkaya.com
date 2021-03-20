@@ -15,23 +15,24 @@ grafikCssAyari(mediaQuery);
 
 function Oyun() {
     let buOyun = this;
+    this.ilkTiklamaYapildi = false;
     // değişken isimlerinin kringliği bu kodları yazarken ne kadar kafayı yediğimi bir nebze gösteriyor.
-    this.herSeyiHazirEtVeOyunuMarsYapBirZahmetCanimsin = function() {
+    this.herSeyiHazirEtVeOyunuMarsYapBirZahmetCanimsin = function () {
         // sesleri calarken inmesini beklememek icin, grafik degistirince hakeza
-        let preload = async function() {
+        buOyun.preload = async function (sadeceSesleriOnyukle = false) {
             let tumGrafikler = [
-                'resimler/aynalikedi.webp',
-                'resimler/biyiklikedi.jpg',
-                'resimler/bos.png',
-                'resimler/danscibebek.webp',
-                'resimler/diskokedi.gif',
-                'resimler/epilepsikopek.webp',
-                'resimler/halaykedi.webp',
-                'resimler/istebu.webp',
-                'resimler/mahzunkermit.webp',
-                'resimler/o.png',
-                'resimler/polatalemdar.webp',
-                'resimler/x.png'
+                'resimler/xoxoyunu/aynalikedi.webp',
+                'resimler/xoxoyunu/biyiklikedi.jpg',
+                'resimler/xoxoyunu/bos.png',
+                'resimler/xoxoyunu/danscibebek.webp',
+                'resimler/xoxoyunu/diskokedi.gif',
+                'resimler/xoxoyunu/epilepsikopek.webp',
+                'resimler/xoxoyunu/halaykedi.webp',
+                'resimler/xoxoyunu/istebu.webp',
+                'resimler/xoxoyunu/mahzunkermit.webp',
+                'resimler/xoxoyunu/o.png',
+                'resimler/xoxoyunu/polatalemdar.webp',
+                'resimler/xoxoyunu/x.png'
             ];
             let tumSesler = [
                 'sesler/akasyaduragisasirma.mp3',
@@ -57,37 +58,55 @@ function Oyun() {
                 'sesler/uzgunmiyav.mp3'
             ];
             for (let i = 0; i < tumSesler.length; ++i) {
-                var audio = new Audio(tumSesler[i]);
+                var audio = new Audio();
+                // once this file loads, it will call loadedAudio()
+                // the file will be kept by the browser as cache
+                audio.addEventListener('canplaythrough', function () {
+                    return true;
+                }, false);
+                audio.src = tumSesler[i];
             }
-            for (let i = 0; i < tumGrafikler.length; ++i) {
-                var grafik = new Image();
-                grafik.src = tumGrafikler[i];
+            if (!sadeceSesleriOnyukle) {
+                for (let i = 0; i < tumGrafikler.length; ++i) {
+                    var grafik = new Image();
+                    grafik.src = tumGrafikler[i];
+                }
             }
         };
-        preload();
+        buOyun.preload();
 
-        navigator.mediaSession.setActionHandler('play', function() {});
-        navigator.mediaSession.setActionHandler('pause', function() {});
+        navigator.mediaSession.setActionHandler('play', function () {
+        });
+        navigator.mediaSession.setActionHandler('pause', function () {
+        });
 
         // resmi suruklemeyi engelleme
         for (let u = 0; u < 3; ++u) {
             for (let o = 0; o < 3; ++o) {
-                document.getElementById(u.toString()+o.toString()).ondragstart = function() { return false; };
+                document.getElementById(u.toString() + o.toString()).ondragstart = function () {
+                    return false;
+                };
             }
         }
         let butonResimleri = document.getElementsByClassName("btn-img-hucre");
         for (let i = 0; i < butonResimleri.length; ++i) {
-            butonResimleri[i].ondragstart = function() { return false; };
+            butonResimleri[i].ondragstart = function () {
+                return false;
+            };
         }
-        document.getElementById("azses").ondragstart = function() { return false; };
-        document.getElementById("cokses").ondragstart = function() { return false; };
+        document.getElementById("azses").ondragstart = function () {
+            return false;
+        };
+        document.getElementById("cokses").ondragstart = function () {
+            return false;
+        };
 
         if (!buOyun.oyuncu.ilkBaslar) {
             buOyun.bot.hamleYap(buOyun.bot.dogumTarihim);
         }
 
     };
-    this.sallaAbiSalla = async function(eleman, ms=2000) {
+    this.sallaAbiSalla = async function (eleman, ms = 2000) {
         eleman.classList.add("salla");
         await uyuUyuTekYaptiginUyumakZaten(ms);
         eleman.classList.remove("salla");
@@ -102,33 +121,33 @@ function Oyun() {
     }
 
     this.grafikler = {
-        "klasikx" : "resimler/x.png",
-        "klasiko" : "resimler/o.png",
-        "diskokedi" : "resimler/diskokedi.gif",
-        "epilepsikopek" : "resimler/epilepsikopek.webp",
-        "danscibebek" : "resimler/danscibebek.webp",
-        "mahzunkermit" : "resimler/mahzunkermit.webp",
-        "polatalemdar" : "resimler/polatalemdar.webp",
-        "aynalikedi" : "resimler/aynalikedi.webp",
-        "istebu" : "resimler/istebu.webp",
-        "halaykedi" : "resimler/halaykedi.webp",
-        "biyiklikedi" : "resimler/biyiklikedi.jpg",
-        "bos" : "resimler/bos.png"
+        "klasikx": "resimler/xoxoyunu/x.png",
+        "klasiko": "resimler/xoxoyunu/o.png",
+        "diskokedi": "resimler/xoxoyunu/diskokedi.gif",
+        "epilepsikopek": "resimler/xoxoyunu/epilepsikopek.webp",
+        "danscibebek": "resimler/xoxoyunu/danscibebek.webp",
+        "mahzunkermit": "resimler/xoxoyunu/mahzunkermit.webp",
+        "polatalemdar": "resimler/xoxoyunu/polatalemdar.webp",
+        "aynalikedi": "resimler/xoxoyunu/aynalikedi.webp",
+        "istebu": "resimler/xoxoyunu/istebu.webp",
+        "halaykedi": "resimler/xoxoyunu/halaykedi.webp",
+        "biyiklikedi": "resimler/xoxoyunu/biyiklikedi.jpg",
+        "bos": "resimler/xoxoyunu/bos.png"
     };
-    this.miyavSesiSrc = function() {
-        return "sesler/miyav"+(Math.floor(Math.random() * 4)+1).toString()+".mp3";
+    this.miyavSesiSrc = function () {
+        return "sesler/miyav" + (Math.floor(Math.random() * 4) + 1).toString() + ".mp3";
     }
     this.tiklamaSesEfektleri = {
-        "klasikx" : "sesler/xses.mp3",
-        "klasiko" : "sesler/oses.mp3",
-        "diskokedi" : buOyun.miyavSesiSrc,
-        "epilepsikopek" : "sesler/hav.mp3",
-        "danscibebek" : "sesler/bebek.mp3",
-        "mahzunkermit" : "sesler/huzunlu.mp3",
-        "polatalemdar" : "sesler/disk.mp3",
-        "aynalikedi" : "sesler/uzgunmiyav.mp3",
-        "istebu" : "sesler/istebu.mp3",
-        "halaykedi" : buOyun.miyavSesiSrc,
+        "klasikx": "sesler/xses.mp3",
+        "klasiko": "sesler/oses.mp3",
+        "diskokedi": buOyun.miyavSesiSrc,
+        "epilepsikopek": "sesler/hav.mp3",
+        "danscibebek": "sesler/bebek.mp3",
+        "mahzunkermit": "sesler/huzunlu.mp3",
+        "polatalemdar": "sesler/disk.mp3",
+        "aynalikedi": "sesler/uzgunmiyav.mp3",
+        "istebu": "sesler/istebu.mp3",
+        "halaykedi": buOyun.miyavSesiSrc,
         "biyiklikedi": buOyun.miyavSesiSrc
     };
 
@@ -148,11 +167,11 @@ function Oyun() {
         skorMaglubiyet: 0,
         skorBeraberiyet: 0
     };
-    this.isaretinSahibi = function(isaret) {
+    this.isaretinSahibi = function (isaret) {
         return (this.oyuncu.isaret === isaret) ? this.oyuncu : this.bot;
     };
 
-    this.hucreSet = function(id, isaret, resimGrafikGuncelle=false) {
+    this.hucreSet = function (id, isaret, resimGrafikGuncelle = false) {
         this.matris[parseInt(id[0])][parseInt(id[1])] = isaret;
         document.getElementById(id).src = buOyun.grafikler[this.grafik[isaret]];
 
@@ -164,11 +183,11 @@ function Oyun() {
         }
     }
 
-    this.agaOyunBittiMiKontrolEtEgerBittiyseBitmeMesajiFalanGosterDarkSoulsEfektliMefektliEyvallah = function() {
+    this.agaOyunBittiMiKontrolEtEgerBittiyseBitmeMesajiFalanGosterDarkSoulsEfektliMefektliEyvallah = function () {
         let bitis = false;
         let isaretler = ["x", "o"];
         for (let isrt = 0; isrt < 2; ++isrt) {
-            let kazananSira = isaretler[isrt]+isaretler[isrt]+isaretler[isrt];
+            let kazananSira = isaretler[isrt] + isaretler[isrt] + isaretler[isrt];
             // normalde kazanma durumunu belirledigi anda break yapacaktim
             // ama ve lakin zaten yapacagi topu topu 8 tane islem, O(1) yani havalı terimlerle ifade etmek gerekirse :P
             for (let i = 0; i < 3; ++i) {
@@ -177,15 +196,15 @@ function Oyun() {
                     bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
                 }
                 // sutun
-                if (buOyun.matris[0][i]+buOyun.matris[1][i]+buOyun.matris[2][i] === kazananSira) {
+                if (buOyun.matris[0][i] + buOyun.matris[1][i] + buOyun.matris[2][i] === kazananSira) {
                     bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
                 }
             }
             // capraz
-            if ((buOyun.matris[0][0]+buOyun.matris[1][1]+buOyun.matris[2][2]) === kazananSira) {
+            if ((buOyun.matris[0][0] + buOyun.matris[1][1] + buOyun.matris[2][2]) === kazananSira) {
                 bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
             }
-            if ((buOyun.matris[0][2]+buOyun.matris[1][1]+buOyun.matris[2][0]) === kazananSira) {
+            if ((buOyun.matris[0][2] + buOyun.matris[1][1] + buOyun.matris[2][0]) === kazananSira) {
                 bitis = buOyun.isaretinSahibi(isaretler[isrt]).benimAdim;
             }
         }
@@ -197,12 +216,12 @@ function Oyun() {
             }
         }
         let bitisler = {
-            oyuncu: {yazianahtari: "kazandin", skorTablosu:"skorGalibiyet", ses:"sesler/kazandinzafersarkisi.mp3"},
-            bot: {yazianahtari: "kaybettin", skorTablosu:"skorMaglubiyet", ses:"sesler/oldun.mp3"},
-            berabere: {yazianahtari: "berabere", skorTablosu:"skorBeraberiyet", ses:"sesler/berabere.mp3"}
+            oyuncu: {yazianahtari: "kazandin", skorTablosu: "skorGalibiyet", ses: "sesler/kazandinzafersarkisi.mp3"},
+            bot: {yazianahtari: "kaybettin", skorTablosu: "skorMaglubiyet", ses: "sesler/oldun.mp3"},
+            berabere: {yazianahtari: "berabere", skorTablosu: "skorBeraberiyet", ses: "sesler/berabere.mp3"}
         };
         document.getElementById(bitisler[bitis].skorTablosu).innerHTML = (++this.skorlar[bitisler[bitis].skorTablosu]).toString();
-        document.getElementById(bitisler[bitis].skorTablosu+"Kucuk").innerHTML = (this.skorlar[bitisler[bitis].skorTablosu]).toString();
+        document.getElementById(bitisler[bitis].skorTablosu + "Kucuk").innerHTML = (this.skorlar[bitisler[bitis].skorTablosu]).toString();
         buOyun.sesCal(bitisler[bitis].ses, true);
         if (bitis === "oyuncu") {
             buOyun.sesCal("sesler/kazandin.mp3");
@@ -222,7 +241,7 @@ function Oyun() {
     };
 
     this.sesKaydirgac = document.getElementById("sesRange");
-    this.sesKaydirgac.oninput = function() {
+    this.sesKaydirgac.oninput = function () {
         buOyun.oyuncu.interactYapti = true;
         if (buOyun.bitisSesi) {
             buOyun.bitisSesi.volume = this.value;
@@ -236,11 +255,11 @@ function Oyun() {
     };
     this.calinanSesler = [];
     this.bitisSesi = null;
-    this.sesCal = function(url, bitisSesiCal=false) {
+    this.sesCal = function (url, bitisSesiCal = false) {
         if (!bitisSesiCal) {
             let sesId = ((new Date()).getTime()).toString();
             let ses = new Audio(url);
-            ses.addEventListener("ended", function() {
+            ses.addEventListener("ended", function () {
                 if (sesId in buOyun.calinanSesler) {
                     delete buOyun.calinanSesler[sesId];
                 }
@@ -259,7 +278,7 @@ function Oyun() {
 
     };
 
-    this.hamleSesiCal = function(isrt) {
+    this.hamleSesiCal = function (isrt) {
         let tiklamaSesiSrc = buOyun.tiklamaSesEfektleri[buOyun.grafik[isrt]];
         if (typeof tiklamaSesiSrc === 'function') {
             tiklamaSesiSrc = tiklamaSesiSrc();
@@ -275,6 +294,10 @@ function Oyun() {
         interactYapti: false,
         telefondanGiriyor: navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i),
         tiklama: async function (id) {
+            if (!(buOyun.ilkTiklamaYapildi)) {
+                buOyun.ilkTiklamaYapildi = true;
+                buOyun.preload(true);
+            }
             this.interactYapti = true;
             if (!buOyun.bot.hamleYapiyor) {
                 let i = parseInt(id[0]);
@@ -283,7 +306,7 @@ function Oyun() {
                     buOyun.bot.hamleYapiyor = true;
                     buOyun.hamleSesiCal(this.isaret);
                     buOyun.hucreSet(id, this.isaret);
-                    this.eskiHamleler.push([i,j]);
+                    this.eskiHamleler.push([i, j]);
 
                     if (!buOyun.agaOyunBittiMiKontrolEtEgerBittiyseBitmeMesajiFalanGosterDarkSoulsEfektliMefektliEyvallah()) {
                         let dogumTarihi = buOyun.bot.dogumTarihim;
@@ -309,7 +332,7 @@ function Oyun() {
             }
         },
 
-        fareyiCekme: function(element, id) {
+        fareyiCekme: function (element, id) {
             if (!buOyun.oyuncu.telefondanGiriyor) {
                 if (buOyun.matris[parseInt(id[0])][parseInt(id[1])] === "bos") {
                     document.getElementById(id).src = buOyun.grafikler.bos;
@@ -319,10 +342,10 @@ function Oyun() {
     };
 
     this.zorlukKaydirgac = document.getElementById("zorlukDuzeyiRange");
-    this.zorlukKaydirgac.oninput = function() {
+    this.zorlukKaydirgac.oninput = function () {
         buOyun.oyuncu.interactYapti = true;
         let zorlukYazi = document.getElementById("zorlukDuzeyiYazi");
-        let zorluk = this.value;
+        let zorluk = parseInt(this.value);
         let simdikidil = sessionStorage.getItem("suankidil") ? sessionStorage.getItem("suankidil") : "tr";
         let zorlukSozlukAnahtari;
         if (zorluk === 0) {
@@ -341,10 +364,13 @@ function Oyun() {
             zorlukSozlukAnahtari = "zor80_100";
         } else {
             zorlukSozlukAnahtari = "zor100";
+            buOyun.yenidenBaslat(buOyun.oyuncu.isaret);
             buOyun.sesCal("sesler/enzormod.mp3");
             buOyun.sallaAbiSalla(document.getElementById("xox-dashboard"))
             buOyun.sallaAbiSalla(document.getElementById("xox-baslik"))
             buOyun.sallaAbiSalla(document.getElementById("xox-tablosu"))
+
+
         }
         zorlukYazi.setAttribute("data-tercume", zorlukSozlukAnahtari);
         zorlukYazi.innerHTML = sozlugeBak(zorlukSozlukAnahtari, simdikidil);
@@ -356,18 +382,18 @@ function Oyun() {
         hamleYapiyor: false,
         eskiHamleler: [],
 
-        isaret: function() {
+        isaret: function () {
             return (buOyun.oyuncu.isaret === "o") ? "x" : "o";
         },
 
-        hamleSolmaEtkisi: async function(id) {
+        hamleSolmaEtkisi: async function (id) {
             let siniflar = document.getElementById(id).className.split(" ");
             document.getElementById(id).className = siniflar[0] + " " + siniflar[1] + " hucre-animasyon";
             await uyuUyuTekYaptiginUyumakZaten(1000);
             document.getElementById(id).className = siniflar[0] + " " + siniflar[1] + " hucre-animasyon-yok";
 
         },
-        kazanmaBloklamaZorlugu: function() {
+        kazanmaBloklamaZorlugu: function () {
             if (buOyun.zorlukKaydirgac.value === 0) {
                 return 0;
             } else if (buOyun.zorlukKaydirgac.value < 40) {
@@ -376,7 +402,7 @@ function Oyun() {
                 return 100;
             }
         },
-        digerHamleZorlugu: function() {
+        digerHamleZorlugu: function () {
             if (buOyun.zorlukKaydirgac.value <= 55) {
                 return 0;
             } else if (buOyun.zorlukKaydirgac.value < 100) {
@@ -386,8 +412,8 @@ function Oyun() {
             }
         },
 
-        kazanmaKordinatYardimci: function(isrt) {
-            let kazananSira = ["bos"+isrt+isrt, isrt+"bos"+isrt, isrt+isrt+"bos"];
+        kazanmaKordinatYardimci: function (isrt) {
+            let kazananSira = ["bos" + isrt + isrt, isrt + "bos" + isrt, isrt + isrt + "bos"];
             for (let i = 0; i < 3; ++i) {
                 // satir
                 let j = kazananSira.indexOf(buOyun.matris[i].join(""));
@@ -395,25 +421,25 @@ function Oyun() {
                     return [i, j];
                 }
                 // sutun
-                j = kazananSira.indexOf(buOyun.matris[0][i]+buOyun.matris[1][i]+buOyun.matris[2][i]);
+                j = kazananSira.indexOf(buOyun.matris[0][i] + buOyun.matris[1][i] + buOyun.matris[2][i]);
                 if (j !== -1) {
                     return [j, i];
                 }
             }
             // capraz
-            let j = kazananSira.indexOf(buOyun.matris[0][0]+buOyun.matris[1][1]+buOyun.matris[2][2]);
+            let j = kazananSira.indexOf(buOyun.matris[0][0] + buOyun.matris[1][1] + buOyun.matris[2][2]);
             if (j !== -1) {
                 return [j, j];
             }
-            j = kazananSira.indexOf(buOyun.matris[0][2]+buOyun.matris[1][1]+buOyun.matris[2][0]);
+            j = kazananSira.indexOf(buOyun.matris[0][2] + buOyun.matris[1][1] + buOyun.matris[2][0]);
             if (j !== -1) {
-                return [j, 2-j];
+                return [j, 2 - j];
             }
             return false;
         },
         hamleler: [
             // kazanma hamlesi
-            function() {
+            function () {
                 if (Math.floor(Math.random() * 101) <= buOyun.bot.kazanmaBloklamaZorlugu()) {
                     return buOyun.bot.kazanmaKordinatYardimci(buOyun.bot.isaret());
                 } else {
@@ -421,7 +447,7 @@ function Oyun() {
                 }
             },
             // rakibi bloklama hamlesi
-            function() {
+            function () {
                 if (Math.floor(Math.random() * 101) <= buOyun.bot.kazanmaBloklamaZorlugu()) {
                     return buOyun.bot.kazanmaKordinatYardimci(buOyun.oyuncu.isaret);
                 } else {
@@ -429,21 +455,20 @@ function Oyun() {
                 }
             },
             // 2000 iq hamle
-            function() {
+            function () {
                 if (Math.floor(Math.random() * 101) <= buOyun.bot.digerHamleZorlugu()) {
                     // kaynak: https://www.wikihow.com/Win-at-Tic-Tac-Toe
                     if (buOyun.oyuncu.ilkBaslar) {
                         // oyuncu koseden basladiysa
-                        if (dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [0,0]) ||
-                            dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [0,2]) ||
-                            dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [2,0]) ||
-                            dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [2,2])) {
+                        if (dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [0, 0]) ||
+                            dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [0, 2]) ||
+                            dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [2, 0]) ||
+                            dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [2, 2])) {
                             if (buOyun.bot.eskiHamleler.length === 0) {
                                 return [1, 1];
-                            }
-                            else if (buOyun.bot.eskiHamleler.length === 1) {
+                            } else if (buOyun.bot.eskiHamleler.length === 1) {
                                 // kenara koyacakmissin 2. hamlede wikihowa gore sjjdjsdj
-                                let kenarlar = [[0,1], [1,0], [1,2], [2,1]]
+                                let kenarlar = [[0, 1], [1, 0], [1, 2], [2, 1]]
                                 for (let k = 0; k < kenarlar.length; ++k) {
                                     if (buOyun.matris[kenarlar[k][0]][kenarlar[k][1]] === "bos") {
                                         return kenarlar[k];
@@ -455,19 +480,19 @@ function Oyun() {
                                 // _ _ x
                                 // _ x
                                 let htable = {
-                                    "1001":"00",
-                                    "0110":"00",
-                                    "0112":"02",
-                                    "1201":"02",
-                                    "1221":"22",
-                                    "2112":"22",
-                                    "1021":"20",
-                                    "2110":"20"
+                                    "1001": "00",
+                                    "0110": "00",
+                                    "0112": "02",
+                                    "1201": "02",
+                                    "1221": "22",
+                                    "2112": "22",
+                                    "1021": "20",
+                                    "2110": "20"
                                 };
-                                let tehlikeliKose = htable[buOyun.oyuncu.eskiHamleler[1][0].toString()+buOyun.oyuncu.eskiHamleler[1][1].toString()+
-                                buOyun.oyuncu.eskiHamleler[2][0].toString()+buOyun.oyuncu.eskiHamleler[2][1].toString()];
+                                let tehlikeliKose = htable[buOyun.oyuncu.eskiHamleler[1][0].toString() + buOyun.oyuncu.eskiHamleler[1][1].toString() +
+                                buOyun.oyuncu.eskiHamleler[2][0].toString() + buOyun.oyuncu.eskiHamleler[2][1].toString()];
                                 if (tehlikeliKose) {
-                                    let tehlikeliKoseKordinat = [parseInt(tehlikeliKose[0]),parseInt(tehlikeliKose[1])];
+                                    let tehlikeliKoseKordinat = [parseInt(tehlikeliKose[0]), parseInt(tehlikeliKose[1])];
                                     if (buOyun.matris[tehlikeliKoseKordinat[0]][tehlikeliKoseKordinat[1]] === "bos") {
                                         return tehlikeliKoseKordinat;
                                     }
@@ -475,11 +500,11 @@ function Oyun() {
                             }
                         } // oyuncu ortadan baslarsa
                         else if ((buOyun.matris[1][1] === buOyun.oyuncu.isaret) && buOyun.bot.eskiHamleler.length === 0) {
-                            return [0,0];
+                            return [0, 0];
                         } // oyuncu kenardan baslarsa
                         else {
                             if (buOyun.bot.eskiHamleler.length === 0) {
-                                return [1,1];
+                                return [1, 1];
                             } else if (buOyun.bot.eskiHamleler.length === 1) {
 
                                 // wikihowda olmayan olasilik:
@@ -487,19 +512,19 @@ function Oyun() {
                                 // x _ _ aşağıda var çözüm.
                                 // _ _ _
                                 let htable = {
-                                    "1001":"00",
-                                    "0110":"00",
-                                    "0112":"02",
-                                    "1201":"02",
-                                    "1221":"22",
-                                    "2112":"22",
-                                    "1021":"20",
-                                    "2110":"20"
+                                    "1001": "00",
+                                    "0110": "00",
+                                    "0112": "02",
+                                    "1201": "02",
+                                    "1221": "22",
+                                    "2112": "22",
+                                    "1021": "20",
+                                    "2110": "20"
                                 };
-                                let tehlikeliKose = htable[buOyun.oyuncu.eskiHamleler[0][0].toString()+buOyun.oyuncu.eskiHamleler[0][1].toString()+
-                                buOyun.oyuncu.eskiHamleler[1][0].toString()+buOyun.oyuncu.eskiHamleler[1][1].toString()];
+                                let tehlikeliKose = htable[buOyun.oyuncu.eskiHamleler[0][0].toString() + buOyun.oyuncu.eskiHamleler[0][1].toString() +
+                                buOyun.oyuncu.eskiHamleler[1][0].toString() + buOyun.oyuncu.eskiHamleler[1][1].toString()];
                                 if (tehlikeliKose) {
-                                    let tehlikeliKoseKordinat = [parseInt(tehlikeliKose[0]),parseInt(tehlikeliKose[1])];
+                                    let tehlikeliKoseKordinat = [parseInt(tehlikeliKose[0]), parseInt(tehlikeliKose[1])];
                                     if (buOyun.matris[tehlikeliKoseKordinat[0]][tehlikeliKoseKordinat[1]] === "bos") {
                                         return tehlikeliKoseKordinat;
                                     }
@@ -511,7 +536,7 @@ function Oyun() {
                                 // _ _ x botuma karşı bu zaferi kazanmak beni çok üzdü.
                                 // x _ _ botumun mükemmelliğinden şüphem yoktu çünkü eskiden.
                                 // artık bir kez daha farkına vardım ki yalnız Allah mükemmeldir.
-                                let koseler = [[0,0], [0,2], [2,0], [2,2]];
+                                let koseler = [[0, 0], [0, 2], [2, 0], [2, 2]];
                                 for (let k = 0; k < koseler.length; ++k) {
 
                                     if (buOyun.matris[koseler[k][0]][koseler[k][1]] === "bos") {
@@ -519,7 +544,7 @@ function Oyun() {
                                         if (buOyun.matris[koseler[k][0]].join("").length === 7) {
 
                                             // satir xbosbos olursa mesela 5 olur
-                                            let sutun= "";
+                                            let sutun = "";
                                             for (let i = 0; i < 3; ++i) {
                                                 sutun += buOyun.matris[i][koseler[k][1]];
                                             }
@@ -540,51 +565,47 @@ function Oyun() {
 
                             }
                         }
-                    }
-                    else {
+                    } else {
                         // koseyle basla
                         if (buOyun.bot.eskiHamleler.length === 0) {
-                            return [0,0];
-                        }
-                        else {
+                            return [0, 0];
+                        } else {
                             // oyuncu ortaya koyarsa
-                            if (dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [1,1])) {
+                            if (dizilerEsittir(buOyun.oyuncu.eskiHamleler[0], [1, 1])) {
                                 if (buOyun.bot.eskiHamleler.length === 1) {
-                                    return [2,2];
-                                }
-                                else if (buOyun.bot.eskiHamleler.length === 2) {
-                                    let koseler = [[0,0], [0,2], [2,0], [2,2]];
+                                    return [2, 2];
+                                } else if (buOyun.bot.eskiHamleler.length === 2) {
+                                    let koseler = [[0, 0], [0, 2], [2, 0], [2, 2]];
                                     for (let k = 0; k < koseler.length; ++k) {
                                         if (buOyun.matris[koseler[k][0]][koseler[k][1]] === "bos") {
                                             return koseler[k];
                                         }
                                     }
                                 }
-                            }
-                            else { // oyuncu ortaya koymazsa
+                            } else { // oyuncu ortaya koymazsa
                                 if (buOyun.bot.eskiHamleler.length === 1) {
-                                    let koseler = [[0,2], [2,0], [2,2]];
+                                    let koseler = [[0, 2], [2, 0], [2, 2]];
                                     for (let k = 0; k < koseler.length; ++k) {
                                         if (buOyun.matris[koseler[k][0]][koseler[k][1]] === "bos") {
-                                            if (Number.isInteger(koseler[k][0]/2) && Number.isInteger(koseler[k][1]/2)) {
-                                                if (buOyun.matris[koseler[k][0]/2][koseler[k][1]/2] === "bos") {
+                                            if (Number.isInteger(koseler[k][0] / 2) && Number.isInteger(koseler[k][1] / 2)) {
+                                                if (buOyun.matris[koseler[k][0] / 2][koseler[k][1] / 2] === "bos") {
                                                     return koseler[k];
                                                 }
                                             }
                                         }
                                     }
                                 } else if (buOyun.bot.eskiHamleler.length === 2) {
-                                    let koseler = [[0,2], [2,0], [2,2]];
+                                    let koseler = [[0, 2], [2, 0], [2, 2]];
                                     for (let k = 0; k < koseler.length; ++k) {
                                         if (buOyun.matris[koseler[k][0]][koseler[k][1]] === "bos") {
-                                            if (Number.isInteger(koseler[k][0]/2)
-                                                && Number.isInteger(koseler[k][1]/2)
-                                                && Number.isInteger(buOyun.bot.eskiHamleler[1][0]+koseler[k][0]/2)
-                                                && Number.isInteger((buOyun.bot.eskiHamleler[1][1]+koseler[k][1])/2)) {
+                                            if (Number.isInteger(koseler[k][0] / 2)
+                                                && Number.isInteger(koseler[k][1] / 2)
+                                                && Number.isInteger(buOyun.bot.eskiHamleler[1][0] + koseler[k][0] / 2)
+                                                && Number.isInteger((buOyun.bot.eskiHamleler[1][1] + koseler[k][1]) / 2)) {
 
                                                 if (buOyun.matris[koseler[k][0]][koseler[k][1]] === "bos" &&
-                                                    buOyun.matris[koseler[k][0]/2][koseler[k][1]/2] === "bos" &&
-                                                    buOyun.matris[(buOyun.bot.eskiHamleler[1][0]+koseler[k][0])/2][(buOyun.bot.eskiHamleler[1][1]+koseler[k][1])/2] === "bos") {
+                                                    buOyun.matris[koseler[k][0] / 2][koseler[k][1] / 2] === "bos" &&
+                                                    buOyun.matris[(buOyun.bot.eskiHamleler[1][0] + koseler[k][0]) / 2][(buOyun.bot.eskiHamleler[1][1] + koseler[k][1]) / 2] === "bos") {
                                                     return koseler[k];
                                                 }
                                             }
@@ -598,7 +619,7 @@ function Oyun() {
                 return false;
             },
             // rastgele hamle
-            function() {
+            function () {
                 let rastgeleHamleler = [];
                 for (let i = 0; i < 3; ++i) {
                     for (let j = 0; j < 3; ++j) {
@@ -611,7 +632,7 @@ function Oyun() {
             }
         ],
 
-        hamleYap: async function(dogumTarihi) {
+        hamleYap: async function (dogumTarihi) {
             // doğum tarihi lazım çünkü bot hamle yaparken oyunu yeniden başlatınca hamlesini yeni oyunda tamamlıyor,
             // binaenaleyh sıkıntı çıkıyor. her bot kendi çöplüğünde ötmeli.
             this.hamleYapiyor = true;
@@ -667,13 +688,13 @@ function Oyun() {
 
     }
 
-    this.grafikDegistir = function(isrt) {
+    this.grafikDegistir = function (isrt) {
         buOyun.oyuncu.interactYapti = true;
 
-        let grafik = document.getElementById("grafikler"+isrt).value;
+        let grafik = document.getElementById("grafikler" + isrt).value;
         buOyun.grafik[isrt] = grafik;
-        document.getElementById("tekrar"+ isrt.toUpperCase() +"Buton").src = buOyun.grafikler[grafik];
-        document.getElementById("oyunBitis"+isrt.toUpperCase()+"Buton").src = buOyun.grafikler[grafik];
+        document.getElementById("tekrar" + isrt.toUpperCase() + "Buton").src = buOyun.grafikler[grafik];
+        document.getElementById("oyunBitis" + isrt.toUpperCase() + "Buton").src = buOyun.grafikler[grafik];
 
         let eskiHamleler = buOyun.isaretinSahibi(isrt).eskiHamleler;
         for (let i = 0; i < eskiHamleler.length; ++i) {
@@ -681,16 +702,16 @@ function Oyun() {
         }
 
         let digerIsrt = (isrt === "x") ? "o" : "x";
-        let grafikDropDownSatirlar = document.getElementsByClassName(digerIsrt+"GrafikDegistir");
+        let grafikDropDownSatirlar = document.getElementsByClassName(digerIsrt + "GrafikDegistir");
         for (let i = 0; i < grafikDropDownSatirlar.length; ++i) {
-            grafikDropDownSatirlar[i].className = digerIsrt+"GrafikDegistir";
+            grafikDropDownSatirlar[i].className = digerIsrt + "GrafikDegistir";
             if (grafikDropDownSatirlar[i].value === grafik) {
-                grafikDropDownSatirlar[i].className = digerIsrt+"GrafikDegistir gizli";
+                grafikDropDownSatirlar[i].className = digerIsrt + "GrafikDegistir gizli";
             }
         }
     }
 
-    this.yenidenBaslat = function(isrt) {
+    this.yenidenBaslat = function (isrt) {
         buOyun.oyuncu.interactYapti = true;
         for (let i in buOyun.calinanSesler) {
             if (buOyun.calinanSesler.hasOwnProperty(i)) {
@@ -706,7 +727,7 @@ function Oyun() {
             .css({'opacity': 1});
         for (let i = 0; i < 3; ++i) {
             for (let j = 0; j < 3; ++j) {
-                buOyun.hucreSet(i.toString()+j.toString(), "bos");
+                buOyun.hucreSet(i.toString() + j.toString(), "bos");
             }
         }
         this.sesCal("sesler/yenidenbasla.mp3");

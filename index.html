@@ -3,27 +3,26 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title data-tercume="anasayfatitle">Lütfullah Erkaya | Resmi Site</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="ikon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="ikon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="ikon/favicon-16x16.png">
-    <link rel="shortcut icon" href="ikon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="ikon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link href="resimler/ikon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="resimler/ikon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="resimler/ikon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="resimler/ikon/favicon.ico" rel="shortcut icon">
+    <meta content="#da532c" name="msapplication-TileColor">
+    <meta content="ikon/browserconfig.xml" name="msapplication-config">
+    <meta content="#ffffff" name="theme-color">
 
-    <link rel="stylesheet" href="kutuphaneler/bootstrap.min.css">
-    <script src="kutuphaneler/jquery.min.js"></script>
-    <script src="kutuphaneler/bootstrap.min.js"></script>
-    <script src="kutuphaneler/fontawesome.js"></script>
-    <script src="sozluk_index.js"></script>
-    <script src="tercume.js"></script>
+    <link href="sieses/bootstrap.min.css" rel="stylesheet">
+    <script src="cavasikrip/jquery.min.js"></script>
+    <script src="cavasikrip/bootstrap.min.js"></script>
+    <script src="cavasikrip/fontawesome.js"></script>
+    <script src="cavasikrip/sozluk_index.js"></script>
+    <script src="cavasikrip/tercume.js"></script>
 
-    <link href="style.css" rel="stylesheet">
+    <link href="sieses/genelstil.css" rel="stylesheet">
 </head>
-
 
 
 <body onload="giristeDilAyarla()">
@@ -34,13 +33,16 @@
         $("#gezinme-cubugu-yeri").load("gezinme_cubugu.html");
     });
 
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
     function scrollFunction() {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        document.getElementById("inen-navbar").style.top = "0";
-      } else {
-        document.getElementById("inen-navbar").style.top = "-300px";
-      }
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            document.getElementById("inen-navbar").style.top = "0";
+        } else {
+            document.getElementById("inen-navbar").style.top = "-300px";
+        }
     }
 </script>
 
@@ -50,8 +52,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="giris-baslik-yazilar">
-                <h1 id="giris-baslik-isim" class="">Lütfullah Erkaya</h1>
-                <p id="giris-baslik-nam" data-tercume="bil_muh">Bilgisayar Mühendisi</p>
+                <h1 class="" id="giris-baslik-isim">Lütfullah Erkaya</h1>
+                <p data-tercume="bil_muh" id="giris-baslik-nam">Bilgisayar Mühendisi</p>
             </div>
         </div>
 
@@ -66,30 +68,40 @@
             <div class="col-md-12 col-lg-6 hos-gelme-yeni-yazilar">
                 <h2 data-tercume="hosgeldiniz">Hoş Geldiniz</h2>
                 <br>
-                <p data-tercume="hosgeldiniz_p1" class="lead">Sizleri burada görebilmek gerçekten büyük bir onur. Şu an ziyadesiyle bahtiyar ve kıvanç doluyum.
+                <p class="lead" data-tercume="hosgeldiniz_p1">Sizleri burada görebilmek gerçekten büyük bir onur. Şu an
+                    ziyadesiyle bahtiyar ve kıvanç doluyum.
                 </p>
-                <p data-tercume="hosgeldiniz_p2" class="lead">Ayakta kalmayın, hemen yukarıdaki gezinme
-                    çubuğundan sizler için hazırladığım, komik grafik seçenekli XOX oyunumun tadına bakabilirsiniz.
-                    Aşağıda ise yaptıklarıma ve yapacaklarıma ulaşabileceğiniz linkler var.
+                <p class="lead" data-tercume="hosgeldiniz_p2">Ayakta kalmayın, hemen yukarıdaki gezinme çubuğundan
+                    sizler için hazırladığım, kedi grafikli ve komikli XOX oyunumun tadına bakabilirsiniz. Aşağıda ise
+                    yaptıklarıma ve yapacaklarıma ulaşabileceğiniz linkler var.
                 </p>
                 <p class="lead">
-                    <span class="lead" id="le-konum-paragraf" data-tercume="hosgeldiniz_p3">Sarılmaya ihtiyacınız varsa eğer hemen </span><span data-tercume="hosgeldiniz_p3_asagi" class="lead" id="lutfullah-erkaya-konumu-asagi">aşağıdayım.</span><span data-tercume="hosgeldiniz_p3_sag" class="lead" id="lutfullah-erkaya-konumu-sag">sağdayım.</span>
+                    <span class="lead" data-tercume="hosgeldiniz_p3" id="le-konum-paragraf">Sarılmaya ihtiyacınız varsa eğer hemen </span><span
+                        class="lead" data-tercume="hosgeldiniz_p3_asagi"
+                        id="lutfullah-erkaya-konumu-asagi">aşağıdayım.</span><span class="lead"
+                                                                                   data-tercume="hosgeldiniz_p3_sag"
+                                                                                   id="lutfullah-erkaya-konumu-sag">sağdayım.</span>
                 </p>
             </div>
             <div class="col-md-12 col-lg-6 text-center">
 
                 <div class="saril-resimler pb-3">
-                    <img id="sarilirkene" class="sarilirkene" src="img/sarilirkene.jpg" alt="sarilirkenki foto"/>
-                    <img id="sarilmaOncesi" class="sarilma-oncesi" src="img/sarilma-oncesi.jpg" alt="sarilma oncesi foto"/>
+                    <img alt="sarilirkenki foto" class="sarilirkene" id="sarilirkene" src="resimler/sarilirkene.jpg"/>
+                    <img alt="sarilma oncesi foto" class="sarilma-oncesi" id="sarilmaOncesi"
+                         src="resimler/sarilma-oncesi.jpg"/>
 
                 </div>
 
                 <div style="position: relative;">
 
-                    <button id="saril-butonu" type="button" class="btn btn-lg saril" onclick="sarilmaDurumunuDegistir()">
-                        <span id="saril-yazisi" data-tercume="sarilbuton">Sarıl</span><span id="yeter-yazisi" class="gizli" data-tercume="yeterbuton">Yeter</span>
+                    <button class="btn btn-lg saril" id="saril-butonu" onclick="sarilmaDurumunuDegistir()"
+                            type="button">
+                        <span data-tercume="sarilbuton" id="saril-yazisi">Sarıl</span><span class="gizli"
+                                                                                            data-tercume="yeterbuton"
+                                                                                            id="yeter-yazisi">Yeter</span>
                     </button>
-                    <span id="saril-sayisi" class="saril-sayisi gizli"> <span data-tercume="sarilmasayisi">Sarılma sayısı: </span><span id="saril-sayisi-sayi">1</span></span>
+                    <span class="saril-sayisi gizli" id="saril-sayisi"> <span data-tercume="sarilmasayisi">Sarılma sayısı: </span><span
+                            id="saril-sayisi-sayi">1</span></span>
                 </div>
 
 
@@ -100,30 +112,29 @@
 
 <!--- beni bulun -->
 <div class="container-fluid text-center pad-60px-top pad-30px-bottom">
-    <h2 id="bulbeni" class="pt-lg-5" data-tercume="benibulun">Beni Bulun</h2>
+    <h2 class="pt-lg-5" data-tercume="benibulun" id="bulbeni">Beni Bulun</h2>
     <div class="container pb-lg-5">
         <div class="row social">
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <a href="https://lutfullaherkaya.medium.com/" class="iletisim-linki"><i class="fab fa-medium-m"></i></a>
+                <a class="iletisim-linki" href="https://lutfullaherkaya.medium.com/"><i class="fab fa-medium-m"></i></a>
                 <p class="lead" data-tercume="medium">Burada yazılarım var.</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <a href="https://github.com/lutfullaherkaya/" class="iletisim-linki"><i class="fab fa-github"></i></a>
-                <p class="lead"><a href="https://github.com/lutfullaherkaya/lutfullaherkaya.com"
-                                    class="link-rengi-normallestir" data-tercume="githublink">Bu sitenin kaynak kodu</a><span data-tercume="github"> dahil küçük projelerim
+                <a class="iletisim-linki" href="https://github.com/lutfullaherkaya/"><i class="fab fa-github"></i></a>
+                <p class="lead"><a class="link-rengi-normallestir"
+                                   data-tercume="githublink" href="https://github.com/lutfullaherkaya/lutfullaherkaya.com">Bu sitenin kaynak
+                    kodu</a><span data-tercume="github"> dahil küçük projelerim
                                         burada.</span></p>
             </div>
             <div class="col-md-4">
 
-                <a href="https://www.linkedin.com/in/lutfullaherkaya/" class="iletisim-linki"><i
+                <a class="iletisim-linki" href="https://www.linkedin.com/in/lutfullaherkaya/"><i
                         class="fab fa-linkedin"></i></a>
                 <p class="lead" data-tercume="linkedin">Bana buradan ulaşabilirsiniz.</p>
             </div>
         </div>
     </div>
 </div>
-
-
 
 
 <!-- sayfa altligi -->
@@ -177,11 +188,11 @@
         }
 
     }
+
     const mediaQuery = window.matchMedia("(max-width: 992px)");
     mediaQuery.addEventListener("change", leKonumAyari);
     leKonumAyari(mediaQuery);
 </script>
-
 
 
 </html>

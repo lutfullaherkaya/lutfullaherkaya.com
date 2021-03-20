@@ -1,12 +1,12 @@
 :root {
-    --xox-tablo-rengi: rgba(0, 0, 0, 0.1);
-    --xox-tablo-kenar-rengi: #EDFFEC;
-    --slider-rengi: #ff312e;
+    --xox-tablo-rengi: rgba(18, 30, 24, 0.11);
+    --xox-tablo-kenar-rengi: rgba(255, 77, 107, 0.65);
+    --slider-rengi: #ff3451;
     --slider-ve-form-arkaplan: #ececec;
 
-    --buton-rengi: #e93532a6;
-    --tablo-rengi: #ff312e91;
-    --buton-koyu:  #ca2320c7;
+    --buton-rengi: rgba(230, 68, 93, 0.65);
+    --tablo-rengi: rgba(221, 68, 95, 0.63);
+    --buton-koyu: rgba(207, 62, 89, 0.75);
     --link-rengi: rgb(122, 148, 215);
     --yazi-renk: #EDFFEC;
     --buton-yazi-renk: #EDFFEC;
@@ -25,7 +25,7 @@
 
 body {
     background-color: rgb(27, 29, 35);
-    background-image: url("wallhaven-4gw97n.jpg");
+    background-image: url("../resimler/wallhaven-4gw97n.jpg");
 
 }
 
@@ -37,10 +37,9 @@ footer {
 
 @font-face {
     font-family: 'OptimusPrincepsSemiBold';
-    src: url('darksoulsfontu/optimusprincepssemibold.eot');
-    src: url('darksoulsfontu/optimusprincepssemibold.eot?#iefix') format('embedded-opentype'),
-    url('darksoulsfontu/optimusprincepssemibold.ttf') format('truetype'),
-    url('darksoulsfontu/optimusprincepssemibold.svg#OptimusPrincepsSemiBold') format('svg');
+    src: url('../yazitipleri/optimusprincepssemibold.eot');
+    src: url('../yazitipleri/optimusprincepssemibold.eot?#iefix') format('embedded-opentype'),
+    url('../yazitipleri/optimusprincepssemibold.ttf') format('truetype');
 }
 #oyun-bitme-mesaji {
     font-family: 'OptimusPrincepsSemiBold',sans-serif;
@@ -529,7 +528,7 @@ footer {
         font-size: 95%;
     }
     .solpadding08rem {
-        padding-left: 0;
+        padding-left: 0.4rem;
     }
     .xox-buton-yazi {
         font-size: 1rem;
@@ -593,6 +592,7 @@ footer {
 @media (max-width: 576px) {
     #xox-baslik {
         font-size: 8vw;
+        padding-top: 10px;
     }
     #xox-dashboard h4 {
         font-size: 6vw;
