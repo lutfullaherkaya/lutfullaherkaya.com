@@ -2,199 +2,351 @@
 <html lang="tr">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title data-tercume="anasayfatitle">Lütfullah Erkaya | Resmi Site</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNTLLJ1TVB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    <link href="resimler/ikon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="resimler/ikon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="resimler/ikon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link href="resimler/ikon/favicon.ico" rel="shortcut icon">
-    <meta content="#da532c" name="msapplication-TileColor">
-    <meta content="ikon/browserconfig.xml" name="msapplication-config">
-    <meta content="#ffffff" name="theme-color">
-
-    <link href="sieses/bootstrap.min.css" rel="stylesheet">
-    <script src="cavasikrip/jquery.min.js"></script>
-    <script src="cavasikrip/bootstrap.min.js"></script>
-    <script src="cavasikrip/fontawesome.js"></script>
-    <script src="cavasikrip/sozluk_index.js"></script>
-    <script src="cavasikrip/tercume.js"></script>
-
-    <link href="sieses/genelstil.css" rel="stylesheet">
+        gtag('config', 'G-GNTLLJ1TVB');
+    </script>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Lütfullah Erkaya",
+        "url": "https://lutfullaherkaya.com/"
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="https://lutfullaherkaya.com/lerkaya-og-image.jpg" property="og:image" />
+    <title>Lütfullah Erkaya - Bilgisayar Mühendisi</title>
+    <meta content="Lütfullah Erkaya - Bilgisayar Mühendisi" property="og:title" />
+    <meta content="Yazılım geliştiriyorum. Yazılımınızın
+                    gelişmesini istediğiniz anda ilk aramanız gereken kişiyim. En büyük gayem Türkiye'de gelişmemiş
+                    yazılım kalmamasıdır." name="description" />
+    <meta content="Yazılım geliştiriyorum. Yazılımınızın
+                    gelişmesini istediğiniz anda ilk aramanız gereken kişiyim. En büyük gayem Türkiye'de gelişmemiş
+                    yazılım kalmamasıdır." property="og:description" />
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
+<body class="bg-gray-100">
 
-<body onload="giristeDilAyarla()">
-<!-- gezinme çubuğu -->
-<div id="gezinme-cubugu-yeri"></div>
-<script>
-    $(function () {
-        $("#gezinme-cubugu-yeri").load("gezinme_cubugu.html");
-    });
+    <section class="py-10 md:py-16">
 
-    window.onscroll = function () {
-        scrollFunction()
-    };
+        <div class="container max-w-screen-xl mx-auto px-4">
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            document.getElementById("inen-navbar").style.top = "0";
-        } else {
-            document.getElementById("inen-navbar").style.top = "-300px";
-        }
-    }
-</script>
+            <nav class="flex items-center justify-between mb-10">
+                <img width="460" height="130" class="ml-6 lg:ml-0" style="width: 150px;"
+                    src="assets/image/lerkaya-yazilim.svg" alt="Logo">
 
+                <!-- <button class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">Get my CV</button> -->
+            </nav>
 
-<!-- lutfullah erkaya -->
-<div class="girisss">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="giris-baslik-yazilar">
-                <h1 class="" id="giris-baslik-isim">Lütfullah Erkaya</h1>
-                <p data-tercume="bil_muh" id="giris-baslik-nam">Bilgisayar Mühendisi</p>
+            <div class="text-center">
+                <div class="flex justify-center mb-16">
+                    <img class="rounded-full object-cover" style="width: 356px;"
+                        src="assets/image/IMG-20231231-WA0018.jpg" alt="Image">
+                </div>
+
+                <h6 class="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Lütfullah ERKAYA</h6>
+
+                <h1 class="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Bilgisayar Mühendisi</h1>
+
+                <p class="font-normal text-gray-600 text-md md:text-xl mb-16">Yazılım geliştiriyorum. Yazılımınızın
+                    gelişmesini istediğiniz anda ilk aramanız gereken kişiyim. En büyük gayem Türkiye'de gelişmemiş
+                    yazılım kalmamasıdır.</p>
+
+                <!-- <a href="#" class="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">Hire me</a> -->
             </div>
+
         </div>
 
-    </div>
-</div>
+    </section>
+
+    <section class="py-10 md:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <div class="text-center">
+                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Beni bulun</h1>
+
+                <!-- <p class="font-normal text-gray-400 text-md md:text-lg mb-10">
+                        I’m not currently taking on new client work but feel free to contact me for any <br>
+                        other inquiries.
+                    </p> -->
+
+                <div class="flex flex-wrap items-center justify-center gap-6">
+                    <div class="flex flex-col items-center">
+                        <a href="https://www.instagram.com/lutfullaherkaya/"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="instagram"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <span class="text-sm text-gray-500">Instagram</span>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <a href="https://x.com/lutfullaherkaya"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="twitter"
+                                class="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500"></i>
+                        </a>
+                        <span class="text-sm text-gray-500">Twitter</span>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <a href="https://www.linkedin.com/in/lutfullaherkaya/"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="linkedin"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <span class="text-sm text-gray-500">LinkedIn</span>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <a href="https://github.com/lutfullaherkaya/"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="github"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <span class="text-sm text-gray-500">Github</span>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <a href="https://lutfullaherkaya.medium.com/"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <svg style="width: 40%;"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="800px" height="800px" viewBox="0 -55 256 256" version="1.1"
+                                preserveAspectRatio="xMidYMid">
+                                <g>
+                                    <path
+                                        d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z"
+                                        fill="#6B7280">
+
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                        <span class="text-sm text-gray-500">Yazılarım</span>
+                    </div>
 
 
-<!--- yeni hos gelme -->
-<div class="container-fluid index-container ">
-    <div class="container hos-gelme-yeni px-0">
-        <div class="row p">
-            <div class="col-md-12 col-lg-6 hos-gelme-yeni-yazilar">
-                <h2 data-tercume="hosgeldiniz">Hoş Geldiniz</h2>
-                <br>
-                <p class="lead" data-tercume="hosgeldiniz_p1">Sizleri burada görebilmek gerçekten büyük bir onur. Şu an
-                    ziyadesiyle bahtiyar ve kıvanç doluyum.
-                </p>
-                <p class="lead" data-tercume="hosgeldiniz_p2">Ayakta kalmayın, hemen yukarıdaki gezinme çubuğundan
-                    sizler için hazırladığım, kedi grafikli ve komikli XOX oyunumun tadına bakabilirsiniz. Aşağıda ise
-                    yaptıklarıma ve yapacaklarıma ulaşabileceğiniz linkler var.
-                </p>
-                <p class="lead">
-                    <span class="lead" data-tercume="hosgeldiniz_p3" id="le-konum-paragraf">Sarılmaya ihtiyacınız varsa eğer hemen </span><span
-                        class="lead" data-tercume="hosgeldiniz_p3_asagi"
-                        id="lutfullah-erkaya-konumu-asagi">aşağıdayım.</span><span class="lead"
-                                                                                   data-tercume="hosgeldiniz_p3_sag"
-                                                                                   id="lutfullah-erkaya-konumu-sag">sağdayım.</span>
-                </p>
+
+                    <div class="flex flex-col items-center">
+                        <a href="mailto:lutfullaherkaya@hotmail.com"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="at-sign"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <span class="text-sm text-gray-500">E-Posta</span>
+                    </div>
+
+                </div>
             </div>
-            <div class="col-md-12 col-lg-6 text-center">
 
-                <div class="saril-resimler pb-3">
-                    <img alt="sarilirkenki foto" class="sarilirkene" id="sarilirkene" src="resimler/sarilirkene.jpg"/>
-                    <img alt="sarilma oncesi foto" class="sarilma-oncesi" id="sarilmaOncesi"
-                         src="resimler/sarilma-oncesi.jpg"/>
+
+        </div>
+    </section>
+
+    <section class="py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
+                        <i data-feather="cpu" style="width: 2rem; height: 2rem;"></i>
+                    </div>
+
+                    <h4 class="font-medium text-gray-700 text-lg mb-4">Gömülü Yazılımcı</h4>
+
+                    <p class="font-normal text-gray-500 text-md"><img src="/assets/image/ASELSAN_logo.svg" width="100"
+                            height="20" alt="Aselsan logosu"
+                            style="display:inline; height: 0.875rem; width: auto; position: relative; bottom: 3px;">'da
+                        gömülü yazılım yapıyoruz.</p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
+                        <img src="/assets/image/internet-explorer-logo-svgrepo-com.svg"
+                            style="width: 2rem; height: 2rem;" alt="Internet Explorer Logosu">
+                    </div>
+
+                    <h4 class="font-medium text-gray-700 text-lg mb-4">Full-Stack Web Geliştiricisi</h4>
+
+                    <p class="font-normal text-gray-500 text-md">Boş zamanlarımda hobi olarak <img
+                            style="display:inline; height: 1.375rem; width: auto; position: relative; bottom: 0px"
+                            src="/assets/image/vue-js-seeklogo.svg" width="105" height="37" alt="Vue.js logosu"> ve <img
+                            style="display:inline; height: 1.125rem; width: auto; position: relative; bottom: 3px;"
+                            src="/assets/image/nodejs-logo-svgrepo-com.svg" width="512" height="146"
+                            alt="Node.js logosu"> kullanarak web sitesi
+                        geliştiririm.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="mb-10 lg:mb-0">
+                    <h1 class="font-medium text-gray-700 text-2xl md:text-4xl mb-5">Portföy</h1>
+
+                    <p class="font-normal text-gray-500 text-xs md:text-base">Burada faaliyetlerimi görebilirsiniz.</p>
+                </div>
+
+                <div class="space-y-24">
+                    <div class="flex space-x-6">
+                        <h1 class="font-normal text-gray-700 text-2xl md:text-4xl">1</h1>
+
+                        <div>
+                            <h1 class="font-normal text-gray-700 text-2xl md:text-4xl mb-5"><a
+                                    href="https://metinerkaya.com/" class="underline">metinerkaya.com</a></h1>
+
+                            <p class="font-normal text-gray-500 text-sm md:text-base">Vefat eden babamın anısına
+                                yazılarını ve babam hakkındaki bilgileri paylaştığım web sitesi.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6">
+                        <h1 class="font-normal text-gray-700 text-2xl md:text-4xl">2</h1>
+
+                        <div>
+                            <h1 class="font-normal text-gray-700 text-2xl md:text-4xl mb-5"><a
+                                    href="https://lutfullaherkaya.com/" class="underline">lutfullaherkaya.com</a></h1>
+
+                            <p class="font-normal text-gray-500 text-sm md:text-base">Bu site. <a
+                                    href="https://github.com/lutfullaherkaya/lutfullaherkaya.com" class="underline">Bu
+                                    sitenin kaynak kodu</a>yla birlikte tüm projelerim için <a
+                                    href="https://github.com/lutfullaherkaya/" class="underline">Github'umu</a> takip
+                                edebilirsiniz.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6">
+                        <h1 class="font-normal text-gray-700 text-2xl md:text-4xl">3</h1>
+
+                        <div>
+                            <h1 class="font-normal text-gray-700 text-2xl md:text-4xl mb-5"><a
+                                    href="https://lerkaya.games/" class="underline">lerkaya.games: Kılıçlı Kavga</a></h1>
+
+                            <p class="font-normal text-gray-500 text-sm md:text-base">Pixel grafikli online dövüş oyunum. <a href="https://github.com/lutfullaherkaya/kilicli-kavga-js" class="underline">Kaynak kodu için tıklayın.</a></p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6">
+                        <h1 class="font-normal text-gray-700 text-2xl md:text-4xl">4</h1>
+
+                        <div>
+                            <h1 class="font-normal text-gray-700 text-2xl md:text-4xl mb-5"><a
+                                    href="/xoxoyunu.html" class="underline">XOX Oyunu</a></h1>
+
+                            <p class="font-normal text-gray-500 text-sm md:text-base">Öylesine yaptığım bir oyun. <a href="https://github.com/lutfullaherkaya/lutfullaherkaya.com/blob/master/xoxoyunu.html" class="underline">Kaynak kodu için tıklayın.</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Eğitim</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-3 md:px-8 md:py-10 rounded-md">
+                    <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2019</h4>
+                    <img width="1314" height="309" src="/assets/image/sdal-logo.jpg" style="mix-blend-mode: darken;"
+                        alt="Sincan Süleyman Demirel Anadolu Lisesi">
+
 
                 </div>
 
-                <div style="position: relative;">
+                <div class="bg-gray-50 p-3 md:px-8 md:py-10 rounded-md">
+                    <h4 class="font-medium text-gray-700 text-lg mb-4">2019 – 2023</h4>
+                    <img width="1314" height="309" src="/assets/image/odtu-logo.jpg" style="mix-blend-mode: darken;"
+                        alt="Orta Doğu Teknik Üniversitesi">
 
-                    <button class="btn btn-lg saril" id="saril-butonu" onclick="sarilmaDurumunuDegistir()"
-                            type="button">
-                        <span data-tercume="sarilbuton" id="saril-yazisi">Sarıl</span><span class="gizli"
-                                                                                            data-tercume="yeterbuton"
-                                                                                            id="yeter-yazisi">Yeter</span>
-                    </button>
-                    <span class="saril-sayisi gizli" id="saril-sayisi"> <span data-tercume="sarilmasayisi">Sarılma sayısı: </span><span
-                            id="saril-sayisi-sayi">1</span></span>
                 </div>
 
-
             </div>
+
         </div>
-    </div>
-</div>
 
-<!--- beni bulun -->
-<div class="container-fluid text-center pad-60px-top pad-30px-bottom">
-    <h2 class="pt-lg-5" data-tercume="benibulun" id="bulbeni">Beni Bulun</h2>
-    <div class="container pb-lg-5">
-        <div class="row social">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a class="iletisim-linki" href="https://lutfullaherkaya.medium.com/"><i class="fab fa-medium-m"></i></a>
-                <p class="lead" data-tercume="medium">Burada yazılarım var.</p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a class="iletisim-linki" href="https://github.com/lutfullaherkaya/"><i class="fab fa-github"></i></a>
-                <p class="lead"><a class="link-rengi-normallestir"
-                                   data-tercume="githublink" href="https://github.com/lutfullaherkaya/lutfullaherkaya.com">Bu sitenin kaynak
-                    kodu</a><span data-tercume="github"> dahil küçük projelerim
-                                        burada.</span></p>
-            </div>
-            <div class="col-md-4">
+    </section>
 
-                <a class="iletisim-linki" href="https://www.linkedin.com/in/lutfullaherkaya/"><i
-                        class="fab fa-linkedin"></i></a>
-                <p class="lead" data-tercume="linkedin">Bana buradan ulaşabilirsiniz.</p>
+    <section class="py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Deneyim</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <img width="1314" height="309" src="/assets/image/ASELSAN_logo.svg" style="width: 50%;"
+                        alt="Sincan Süleyman Demirel Anadolu Lisesi">
+                    <h4 class="font-medium text-gray-700 text-lg mb-1 mt-8">2023 – Günümüz</h4>
+                    <h5 class="font-medium text-gray-700 text-md mb-1">Gömülü Yazılım Mühendisi</h5>
+
+
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <img width="1314" height="309" src="/assets/image/cropped-emsal-2.png" style="width: 50%;"
+                        alt="Orta Doğu Teknik Üniversitesi">
+                    <h4 class="font-medium text-gray-700 text-lg mt-8 md:mt-0 mb-1">2022 – 2023</h4>
+                    <h5 class="font-medium text-gray-700 text-md mb-1">Full-Stack Web Geliştirici</h5>
+
+                </div>
+
             </div>
+
         </div>
-    </div>
-</div>
+
+    </section>
 
 
-<!-- sayfa altligi -->
-<div id="sayfa-altligi-yeri"></div>
-<script>
-    $(function () {
-        $("#sayfa-altligi-yeri").load("sayfa_altligi.html");
-    });
-</script>
 
+
+    <footer class="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
+
+
+
+    </footer>
+
+
+    <script>
+        feather.replace()
+    </script>
 
 </body>
 
-<script>
-    let hicSarilmadik = true;
-    let sariliyoruz = false;
-
-    function sarilmaDurumunuDegistir() {
-        if (sariliyoruz) {
-            sariliyoruz = false;
-
-            document.getElementById("sarilmaOncesi").className = "sarilma-oncesi visible";
-            document.getElementById("saril-yazisi").className = "";
-            document.getElementById("yeter-yazisi").className = "gizli";
-        } else {
-            sariliyoruz = true;
-            if (hicSarilmadik) {
-                hicSarilmadik = false;
-                document.getElementById("saril-sayisi").className = "saril-sayisi";
-            } else {
-                document.getElementById("saril-sayisi-sayi").innerHTML =
-                    (parseInt(document.getElementById("saril-sayisi-sayi").innerHTML) + 1).toString();
-            }
-
-            document.getElementById("sarilmaOncesi").className = "sarilma-oncesi hidden";
-            document.getElementById("saril-yazisi").className = "gizli";
-            document.getElementById("yeter-yazisi").className = "";
-
-        }
-    }
-
-    function leKonumAyari(e) {
-        let sagKonum = document.getElementById("lutfullah-erkaya-konumu-sag");
-        let asagiKonum = document.getElementById("lutfullah-erkaya-konumu-asagi");
-        if (e.matches) {
-            sagKonum.className = "lead gizli";
-            asagiKonum.className = "lead";
-        } else {
-            asagiKonum.className = "lead gizli";
-            sagKonum.className = "lead";
-        }
-
-    }
-
-    const mediaQuery = window.matchMedia("(max-width: 992px)");
-    mediaQuery.addEventListener("change", leKonumAyari);
-    leKonumAyari(mediaQuery);
-</script>
-
-
 </html>
-
-
